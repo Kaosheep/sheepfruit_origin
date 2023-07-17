@@ -1,0 +1,16 @@
+main ul{
+    margin: auto;
+}
+main ul li{
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+}
+main ul li a{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+}
+main ul li a .view{
+    margin-left: auto;
+}

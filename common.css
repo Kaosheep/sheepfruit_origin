@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+*{font-family:'Noto Sans TC', sans-serif;}
+
+body{
+    background-image: url("back/blue.jpg");
+}
+main{
+    margin: auto;
+}
+header{
+    position: relative;
+    width: 100%;
+    height:150px;
+    text-align: center;
+    padding: 30px 0;
+    background-image: url("back/green.png");
+}
+header a img{
+    height: 100%;
+}
+nav{
+    max-width: 1200px;  
+    border-radius: 0 0 15px 15px;
+    background-image: url("back/green.png");
+    margin: auto;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 8px 4px  rgba(81, 96, 110,.6);
+    z-index: 5;
+    
+}
+.navmenu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+.list{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition: .25s;
+}
+.list::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    right: 0;
+    top: 0;
+    background-color:#FFFFFF;
+    transition: .3s .3s;
+    z-index: -1;
+    
+}
+.list:first-child::before{
+    border-radius: 0 0 0 15px;
+}
+.list:last-child::before{
+    border-radius: 0 0 15px 0;
+}
+.list+.list{
+    border-left:1px dashed #aaa ;
+}
+.list>a{
+    line-height: 60px;
+}
+.list>ul{ 
+    width: 100%;
+    position: absolute;
+    border-radius:0 0 15px 15px ;
+    background-size: 12px 12px;
+    background-color:#FFFFFF;
+    box-shadow: 0 6px 4px  rgba(81, 96, 110,.6);
+    transition:.25s linear;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.list ul li{
+    padding: 15px 0;
+    transition:.4s;
+}
+.list:hover>ul{
+    transform: scaleY(1);
+    transition: .5s .3s;
+} 
+.list>ul>li:hover{
+    background-color:#dddbd4;
+}
+.list:hover::before{
+    height: 60px;
+    transition:.3s
+}
+.cloudtitle{
+    position: relative;
+    display: block;
+    margin: auto;
+    font-size: 1.2rem;
+    height: 200px;
+    max-width:1200px ;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    z-index: 2;
+}
+.cloudtitle h2{
+    display: inline-block;
+    height: 100%;
+    width: 336px;
+    background:no-repeat center/100% url("back/cloud.png");
+    text-align: center;
+    line-height: 250px;
+    border-radius: 0 0 56px 56px;
+    box-shadow:0 8px 5px -4px rgba(81, 96, 110,.6) ; 
+}
+footer{
+    background-image: url("back/green.png");
+    position: relative;
+    height: 300px;
+    padding-bottom:30px;
+    text-align: center;
+    margin-top: 200px;
+}
+footer::after{
+    content: "";
+    width: 100%;
+    height:38px;
+    background-image:url("back/grass.png");
+    position:absolute ;
+    top:-38px;
+    right: 0;
+    z-index: -1;
+    
+}
+footer h3{
+    font-size: 20px;
+    padding-bottom: 6px;
+}
+.footer{
+    position: relative;
+    margin: auto;
+    max-width: 1100px;
+    margin-top: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    text-align: start;
+    line-height: 24px;
+}
+.footer p{
+    line-height: 30px;
+}
+.footer h3,.footer p{color: #0f2800;}
+.col img{
+    height: 164px;
+}
+.col li{
+    display: inline-block;
+}
+.social>a{
+    display: block;
+    font-weight: 700px;
+    font-size: 19px;
+    padding-top:20px ;
+}
+.social i{
+    color: #0f2800;
+    padding: 4px 2px;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: .2s;
+}
+.social i:hover{
+    color: #2C6E00;
+}
+.totop{
+    height: 93px;
+    width: 78px;
+    position: absolute;
+    background:no-repeat center/100% url("item/totop.png");
+    text-align: center;
+    bottom: 100%;
+}
+.totop a{
+    color: white;
+    line-height: 90px;
+}
+.star{
+    width: 80%;
+    position: absolute;
+    bottom: 100%;
+    z-index: -3;
+    animation:star 2s 0s ease infinite alternate-reverse;
+}
+@keyframes star{
+    0%{opacity: .3;}
+    100%{opacity: 1;}
+}
+/* 錨點 */
+.path{
+    margin: auto;
+    padding: 10px 0;
+    height: 300px;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    position: fixed;
+    right: 5px;
+    z-index: 7;
+}
+.path ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+.path ul li{
+    display: flex;
+    cursor: pointer;
+}
+.path ul li a{
+    color: #0f2800;
+    line-height: 32px;
+}
+.path a img{
+    width:40px ;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    vertical-align: top;
+}
+.path ul{
+    position: relative;
+}
+.path ul::after{
+    content: "";
+    position: absolute;
+    height:75%;
+    border: 2px dashed #90B44B;
+    margin: auto;
+    right: 20px;
+    z-index: -1;
+}
+/* 客服 */
+.server{
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    z-index: 6;
+    cursor: pointer;
+}
+.server label{
+    display: block;
+    width: 100px;
+    height:100px;
+    background: no-repeat center/100% url("logo/service.svg")
+    ;
+}
+.server label{
+    text-align: center;
+    padding-top:85px ;
+    font-size: 10px;
+    color: #2d7000;
+}
+.server .talk{
+    position: absolute;
+    height: 250px;
+    width: 200px;
+    right: 50px;
+    bottom: 80px;
+    border: 1px solid  #2d7000;
+    background-color: #FFFFFF;
+    border-radius:20px 20px 0px 20px;
+    overflow: hidden;
+    text-align: center;
+    z-index:-1;
+    transform: scale(0);
+    transition: .5s;
+    transform-origin:bottom right;
+}
+.server .talk .header{
+    height: 40px;
+    background-color:#2d7000 ;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+.server .talk input{
+    margin-top: auto; 
+}
+.server .talk .info{
+    height: 180px;
+}
+.server .talk input{
+    width: 100%;
+    border: none;
+    border-top:1px solid #aaa ;
+    padding: 5px 20px;
+    caret-color: #90B44B;
+}
+.server .talk input:focus{
+    outline: none;}
+
+.server input[type="checkbox"]{
+    display: none;
+}
+#bot:checked~.talk{
+transform: scale(1);
+}
+#bot:checked+label,
+.server:hover>label{
+    background: no-repeat center/100% url("logo/serviceopen.svg")
+    ;
+}
+/* 圓按鈕 */
+.btn button{
+    width: 24px;
+    height: 24px;
+    border-radius:15px ;
+    background-color:#ffffff ;
+    border: none;
+    box-shadow:0 5px 3px rgba(84, 84, 84, 0.6);
+    transition: .2s;
+    cursor: pointer;
+}
+.btn button:hover{
+    box-shadow:inset 1px 2px 4px rgba(84, 84, 84, 0.6);
+    background-color: #FFF4E2;
+}
+.product{
+    position: relative;
+}
+.product .btn{
+    text-align: center;
+    position: absolute;
+    bottom:50px;
+    width: 300px;
+}
+.product .btn button+button{
+    margin-left: 120px;
+}
+/* 綠色按鈕 */
+.btnchangecolor{
+    text-align: center;
+    background:linear-gradient(45deg,rgb(44, 110, 0) 50%,#ffffff 50%);
+    background-size: 220%;
+    background-position: 100% 100%;
+    transition: .5s;
+    cursor: pointer;
+}
+.btnchangecolortxt{
+    color:transparent;
+    background:linear-gradient(45deg,#ffffff 50%,#2c6e00 50%);
+    background-size: 220%;
+    background-position: 100% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: .5s;
+}
+.btnchangecolor:hover{
+    background-position: 0% 0%;
+}
+.btnchangecolor:hover .btnchangecolortxt{
+    background-position: 0% 0%;
+}
+/* 更多小按鈕 */
+.more{
+    font-size: 14px;
+    position: absolute;
+    width: 110px;
+    padding: 5px 0;
+    border-radius: 20px;
+}
+.more a i{
+    margin-left: 5px;
+    animation: go .6s 0s linear infinite alternate;
+}
+@keyframes go{
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(4px);}
+}
+/* 商品輪播 */
+.product{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url("back/green.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.object{
+    width: 220px;
+    height: 220px;
+    padding: 30px;
+    background-image: radial-gradient(circle, white 60%, rgba(0,0,0,0) 60%);
+    text-align: center;flex-shrink: 0;
+}
+.object img{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+.object h4{
+    padding-top: 40px;
+    word-spacing: 2px;
+}
+/* 每頁標題 */
+.pagebar{
+    width:100%;
+    position: relative;
+    transform: translateY(-60px);
+    margin-bottom: 50px;
+}
+.pagebar img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.pagetitle{
+    width: 400px;
+    height: 150px;
+    background-color: white;
+    border-radius: 200px;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+    transform: translate(-50%,calc(-50% - 30px));
+    left: 50%;
+}
