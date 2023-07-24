@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .wrap{
+    height:100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    }
+    .para{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        transform-style: preserve-3d;
+
+    }
+    .para :is(.back,.fore){
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+    }
+    .para .back{
+        z-index: -1;
+        transform: translateZ(-10px) scale(2);
+        object-fit: contain;
+    }
+    .para .fore{
+        transform:translateY(45%) translateZ(-5px) scale(1.5) ;
+        object-fit: contain;
+        
+    }
+    .grass{
+        width: 100%;
+        height: 100%;
+        background-color: aqua;
+    }
+    .box{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<div class="wrap">
+    <div class="para">
+    <img src="back\moun.png" class="back" alt="">
+    <img src="back\floor.png" class="fore" alt="">
+    <img src="back\paralogo.png" class="paralogo" alt="">
+    </div>
+    <div class="grass">
+
+    </div>
+    <div class="box">
+
+    </div>
+</div>

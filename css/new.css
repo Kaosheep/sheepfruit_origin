@@ -1,0 +1,66 @@
+main ul{
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+main ul li{
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom:1px dashed #2C6E00 ;
+    transition: .4s;
+}
+main ul li p{
+    text-align: center;
+}
+main ul li .s{
+    width: 10%;
+}
+main ul li .m{
+    width: 70%;
+}
+main ul li a{
+    width: 100%;
+    display: flex;
+}
+main ul li a :is(.date,.tag,.view){
+    text-align: center;
+}
+main ul li a *{
+    vertical-align: middle;
+}
+main ul li a .date{
+    width: 10%;
+}
+main ul li a .view{
+    margin-left: auto;
+    width: 10%;
+}
+main ul li a h3{
+    font-size: 1rem;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70%;
+    font-weight: 500;
+}
+main ul li:nth-child(2n) *{
+    color: #2C6E00;
+}
+main ul li a .tag{
+    width: 10%;
+}
+.tag{
+    margin: 8px;
+    line-height: 34px;
+    border-radius: 30px;
+    color: #333;
+}
+main ul li+li:hover{
+    transform: translateY(-7px);
+    box-shadow: 0px 7px 0px rgb(91, 146, 55,.8);
+    background-color: #f2fff1 ;
+    border-top:1px solid #ccc ;
+}

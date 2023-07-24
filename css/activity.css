@@ -71,38 +71,25 @@
 .bbq{
     margin-right:auto;
 }
-.bbq .cloudtitle{
-    transform: translateY(100px);
-}
 .net{
     margin: auto;
-    width: 806px;
-    height: 506px;
+    width: 100%;
+    height: 206px;
     border: 2px solid #686868 ;
     border-radius:10px ;
     opacity: .8;
     background-image:  linear-gradient(#686868 3px, transparent 3px), linear-gradient(to right, #686868 3px, #ffffff 3px);
     background-size: 50px 50px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-}
-.bbq>img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    vertical-align: middle;
-    margin-bottom: 20px;
+    align-items: center;
 }
 .net .box{
     position: relative;
-    width: 250px;
+    width: 240px;
     height: 160px;
-    margin:30px 0px 15px 0px;
     cursor: pointer;
-}
-.net label:first-child{
-    margin-right: 120px;
+    margin-left: 1rem;
 }
 .net .box .f{
     width: 100%;
@@ -113,10 +100,10 @@
     transition: .3s;
     box-shadow: inset 10px 8px 1px rgba(255, 139, 139, 0.5);
 }
-.net label:first-child .f{background-image: url("back/steak.jpg");}
-.net label:nth-child(2) .f{background-image: url("back/steak2.jpg");}
+.net label:first-child .f{background-image: url("../back/steak.jpg");}
+.net label:nth-child(2) .f{background-image: url("../back/steak2.jpg");}
 .net label:nth-child(3) .f{
-    background-image: url("back/steak3.png");
+    background-image: url("../back/steak3.png");
     background-size: fill;
     box-shadow: inset 10px 8px 1px rgba(255, 139, 139, .9);
 }
@@ -185,10 +172,9 @@
 }
 .net>p{ 
     width: 200px;
-    background:no-repeat center / contain url("item/onion.png") ;
-    margin-left: 100px;
+    background:no-repeat center / contain url("../item/onion.png") ;
     text-align: center;
-    padding: 80px 0 0 0;
+    padding: 40px  0;
     line-height: 25px;
     transition: .3s;
 }
@@ -197,7 +183,7 @@
 }
 .box .f::after{
     content:"";
-    background-image: url("activity/yuge.png");
+    background-image: url("../activity/yuge.png");
     background-size: contain;
     width: 100px;
     height: 100px;
@@ -210,7 +196,7 @@
 }
 .box .f::before{
     content:"";
-    background:no-repeat center/ contain url("activity/yuge2.png");
+    background:no-repeat center/ contain url("../activity/yuge2.png");
     background-size: contain;
     width: 100px;
     height: 100px;

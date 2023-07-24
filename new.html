@@ -5,41 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" href="logo\icon.png">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="new.css">
-    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/new.css">
+    <link rel="stylesheet" href="css/grid.css">
 </head>
 <body>
     <header><a href="index.html"><img src="logo/logo.png" alt="logo"></a></header>
     <nav>
         <ul class="navmenu">
-            <li class="list"><a href="">最新消息</a></li>
-            <li class="list"><a href="activity.html">園區介紹</a>
+            <li class="list"><a href="new.html">最新消息</a></li>
+            <li class="list"><a href="about.html">園區介紹</a>
                 <ul>
-                    <li><a href="">門票資訊</a></li>
-                    <li><a href="">園區導覽</a></li>
-                    <li><a href="">園區沿革</a></li>
-                    <li><a href="">動物寫真</a></li>
+                    <li><a href="about.html#price">門票資訊</a></li>
+                    <li><a href="about.html#map">園區導覽</a></li>
+                    <li><a href="about.html#story">園區沿革</a></li>
+                    <li><a href="about.html#photo">動物寫真</a></li>
                 </ul>
             </li>
             <li class="list"><a href="activity.html">牧場體驗</a>
                 <ul>
-                    <li><a href="">活動總覽</a></li>
-                    <li><a href="">手作工坊</a></li>
-                    <li><a href="">烤肉方案</a></li>
+                    <li><a href="activity.html#allact">活動總覽</a></li>
+                    <li><a href="activity.html#actblock">手作工坊</a></li>
+                    <li><a href="activity.html#bbq">烤肉方案</a></li>
                 </ul>
             </li>
-            <li class="list"><a href="">小農產品</a>
+            <li class="list"><a href="shop.html">小農產品</a>
                 <ul>
-                    <li><a href="">全部商品</a></li>
                     <li><a href="milkshop.html">純乳系列</a></li>
                     <li><a href="">常溫點心</a></li>
                     <li><a href="">文創商品</a></li>
-
+                    <li><a href="">全部商品</a></li>
                 </ul>
             </li>
-            <li class="list"><a href="">常見問題</a></li>
+            <li class="list"><a href="QA.html">常見問題</a></li>
             <li class="list"><a href="">登入</a></li>
         </ul>
     </nav>
@@ -48,25 +47,47 @@
         <h1 class="pagetitle">最新消息</h1>
     </div>
     <main>
+        <form class="select col-10" action="">
+            <select name="" id="">
+                <option value="">全部消息</option>
+                <option value="">活動消息</option>
+                <option value="">牧場公告</option>
+                <option value="">優惠消息</option>
+            </select>
+        </form>
         <ul class="col-10">
-            <li><p>公告時間</p><p>類別</p><p>標題</p><p>觀看數</p></li>
+            <li><p class="s">公告時間</p><p class="s">類別</p><p class="m">標題</p><p class="s">觀看數</p></li>
             <li>
-                <a>
+                <a href="">
                     <p class="date">2023.01.08</p>
-                    <span class="tag">優惠消息</span>
-                    <p>牧場生日特典生日當天到牧場，出示身份證件即可享受15%的折扣！</p>
+                    <span class="tag discount">優惠消息</span>
+                    <h3>烤肉週所有方案9折!</h3>
                     <span class="view">566</span>
                 </a>
             </li>
-            <li><a><p class="date">2022.12.25</p><span class="tag">活動消息</span><p>牧場採摘季：現在是採摘的最佳時機！帶上朋友和家人，一起來採摘新鮮的水果和蔬菜，體驗農場樂趣！</p><span class="view">431</span></a></li>
-            <li><a><p class="date">2022.11.12</p><span class="tag annou">牧場公告</span><p>牧場社區合作計劃：農民與當地居民攜手打造可持續發展的農業經濟。</p><spa class="view"n>92</span></a></li>
-            <li><a><p class="date">2022.10.29</p><span class="tag annou">牧場公告</span><p>牧場獲得可持續發展倡議認可</p><span class="view">45</span></a></li>
-            <li><a><p class="date">2022.09.10</p><span class="tag">優惠消息</span><p>預訂牧場導覽即可獲得10%的優惠碼，優惠活動期間限定！</p><span class="view">132</span></a></li>
-            <li><a><p class="date">2022.07.27</p><span></span><p>這個夏天，我們將舉辦一個獨特的牧場音樂節！帶上你的帽子和音樂愛好者，來欣賞現場音樂和美味的牧場美食！</p><span class="view">656</span></a></li>
-            <li><a><p class="date">2022.06.21</p><span class="tag">活動消息</span><p>農場嘉年華，享受歡樂的農村生活！</p><spa class="view"n>45</span></a></li>
-            <li><a><p class="date">2022.05.08</p><span class="tag annou">牧場公告</span><p>舉辦牧場教育計畫，帶領學生們了解農業知識和食物的來源。</p><spa class="view"n>65</span></a></li>
-            <li><a><p class="date">2022.03.15</p><span class="tag">活動消息</span><p>牧場展覽，展示當地特色農產品和傳統工藝品，讓大家更了解當地文化。</p><span class="view">243</span></a></li>
-            <li><a><p class="date">2022.02.03</p><span class="tag">活動消息</span><p>牧場小農市集，集結當地農民和手工藝者，提供各種新鮮農產品和手工商品。</p><spa class="view"n>79</span></a></li>
+            <li>
+                <a href="">
+                    <p class="date">2022.12.25</p>
+                    <span class="tag event">活動消息</span>
+                    <h3>牧場採摘季：現在是採摘的最佳時機！帶上朋友和家人，一起來採摘新鮮的水果和蔬菜，體驗農場樂趣！</h3>
+                    <span class="view">431</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <p class="date">2022.11.12</p>
+                    <span class="tag annou">牧場公告</span>
+                    <h3>牧場社區合作計劃：農民與當地居民攜手打造可持續發展的農業經濟。</h3>
+                    <span class="view">92</span>
+                </a>
+            </li>
+            <li><a href=""><p class="date">2022.10.29</p><span class="tag annou">牧場公告</span><h3>牧場獲得可持續發展倡議認可</h3><span class="view">45</span></a></li>
+            <li><a href=""><p class="date">2022.09.10</p><span class="tag discount">優惠消息</span><h3>預訂牧場導覽即可獲得10%的優惠碼，優惠活動期間限定！</h3><span class="view">132</span></a></li>
+            <li><a href=""><p class="date">2022.07.27</p><span class="tag event">活動消息</span><h3>這個夏天，我們將舉辦一個獨特的牧場音樂節！帶上你的帽子和音樂愛好者，來欣賞現場音樂和美味的牧場美食！</h3><span class="view">656</span></a></li>
+            <li><a href=""><p class="date">2022.06.21</p><span class="tag event">活動消息</span><h3>農場嘉年華，享受歡樂的農村生活！</h3><span class="view">45</span></a></li>
+            <li><a href=""><p class="date">2022.05.08</p><span class="tag annou">牧場公告</span><h3>舉辦牧場教育計畫，帶領學生們了解農業知識和食物的來源。</h3><span class="view">65</span></a></li>
+            <li><a href=""><p class="date">2022.03.15</p><span class="tag event">活動消息</span><h3>牧場展覽，展示當地特色農產品和傳統工藝品，讓大家更了解當地文化。</h3><span class="view">243</span></a></li>
+            <li><a href=""><p class="date">2022.02.03</p><span class="tag event">活動消息</span><h3>牧場小農市集，集結當地農民和手工藝者，提供各種新鮮農產品和手工商品。</h3><spa class="view">79</span></a></li>
         </ul>
     </main>
     <div class="server">

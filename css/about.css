@@ -1,0 +1,209 @@
+html {
+    scroll-padding-top: 60px; }
+main{
+    max-width: 1200px;
+    margin: auto;
+}
+.pagebar img{
+    object-position:bottom;
+}
+.price{
+    margin: 0 auto 150px auto;
+}
+.price table{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    border-collapse:collapse ;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 16px;
+}
+.price table th{
+    height:50px ;
+    color: #2C6E00;
+    font-size: 18px;
+}
+.price table tr{
+    border-bottom: 2px dashed #2C6E00;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.price table tr td{
+    background-color: #fff;
+    color: #2C6E00;
+}
+tr td:last-child{
+    width: 36%;
+}
+tr td:first-child{
+    width: 10%;
+}
+.price table tr i{
+    font-size: 30px;
+}
+.fa-car-side,.fa-motorcycle{
+    margin-right: 10px;
+}
+.map{
+    position: relative;
+    display: flex;
+    margin: 0 auto 150px auto; 
+}
+.map img{
+    width: 75%;
+    max-height: 500px;
+    object-fit:cover;
+    border-radius: 10px;
+}
+.btngroup{
+    width: 20%;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.btngroup button{
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 0 2px rgba(81, 96, 110, .8);
+}
+.btngroup button i{
+    color: transparent;
+    margin-right: 5px;
+}
+.history{
+    margin: 0 auto 150px auto;
+}
+.history .block{
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.history .block img{
+    display: block;
+    border-radius: 10px;
+}
+.history .block .col-10{
+    margin: auto;
+}
+.history .block .col-7{
+    margin-left: auto;
+}
+.history .block .logo{
+    width: 60%;
+    position: absolute;
+    right: 10%;
+}
+.history .block .txt{
+    text-align: center;
+    position: absolute;
+    width: 50%;
+    background:no-repeat center url("../back/cloud2.png");
+    background-size:contain ;
+    right: 0;
+    bottom: 0;
+    padding: 70px 50px 20px;
+}
+.history .block:nth-child(2) .txt{
+    left: 0;
+}
+.history .block:nth-child(3) .txt{
+    right: 10%;
+    padding: 60px 70px 20px;
+}
+.history .block .txt h3{
+    margin-bottom: 1rem;
+}
+.history .block .txt p{
+    margin: auto;
+    width: 70%;
+    line-height: 1.5rem;
+}
+.story{
+    margin: 0 auto 150px auto;
+    display: flex;
+    height: 450px;
+    position: relative;
+}
+.time{
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.time a{
+    height: 90px;
+    line-height: 90px;
+    vertical-align: bottom;
+    font-size: 1.2rem;
+}
+.time a img{
+    height: 100%;
+    width: 30%;
+    object-fit: contain;
+    vertical-align: bottom;
+}
+.window{
+    display: flex;
+    overflow-x:auto;
+    scroll-behavior: smooth;
+}
+.window::-webkit-scrollbar {
+    display: none;
+}
+.window .page{
+    height: 100%;
+    width: 100%;
+    background:no-repeat center url("../back/cloud2.png");
+    background-size: contain;
+    flex-shrink: 0;
+    padding:15%;
+    margin-right: 50px;
+}
+.window:target::before {
+    content: "";
+    display: block;
+    height: 60px;
+    margin: -60px 0 0; 
+  }
+.window .page h3{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.window .page p{
+    line-height: 1.4rem;
+    padding-left:16px;
+}
+.window .page .txt{
+    width: 100%;
+    height:100%;
+    display: flex;
+}
+.window .page .txt img{
+    width: 40%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.photo{
+    margin: auto;
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+    grid-template-rows:repeat(4,1fr) ;
+    gap: 10px;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover ;
+    border-radius: 10px;
+}
+.photo img:first-child{
+    grid-row:1/3 ;
+    grid-column:1/3 ;
+}
+.photo img:nth-child(4){
+    grid-column:3/5 ;
+    grid-row:2/4 ;
+}
