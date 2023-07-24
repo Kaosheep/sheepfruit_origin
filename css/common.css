@@ -394,9 +394,11 @@ transform: scale(1);
     vertical-align: bottom;
 }
 .more a i{
+    font-size: 12px;
     line-height: 14px;
     margin-left: 5px;
     animation: go .6s 0s linear infinite alternate;
+    vertical-align:top;
 }
 @keyframes go{
     0%{transform: translateX(0px);}
