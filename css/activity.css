@@ -215,3 +215,9 @@
     opacity: .8;
     transform: translate(-20px,-30px) ;
 }
+.plan{
+    margin: auto;
+}
+.card{
+    display: flex;
+}
