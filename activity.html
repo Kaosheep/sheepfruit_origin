@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="icon" href="logo\icon.png">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="activity.css">
+    <link rel="icon" href="logo/icon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/activity.css">
 </head>
 <body>
     <header><a href="index.html"><img src="logo/logo.png" alt="logo"></a></header>
     <nav>
         <ul class="navmenu">
-            <li class="list"><a href="">最新消息</a></li>
-            <li class="list"><a href="activity.html">園區介紹</a>
+            <li class="list"><a href="new.html">最新消息</a></li>
+            <li class="list"><a href="about.html">園區介紹</a>
                 <ul>
-                    <li><a href="">門票資訊</a></li>
-                    <li><a href="">園區導覽</a></li>
-                    <li><a href="">園區沿革</a></li>
-                    <li><a href="">動物寫真</a></li>
+                    <li><a href="about.html#price">門票資訊</a></li>
+                    <li><a href="about.html#map">園區導覽</a></li>
+                    <li><a href="about.html#story">園區沿革</a></li>
+                    <li><a href="about.html#photo">動物寫真</a></li>
                 </ul>
             </li>
-            <li class="list"><a href="">牧場體驗</a>
+            <li class="list"><a href="activity.html">牧場體驗</a>
                 <ul>
-                    <li><a href="">活動總覽</a></li>
-                    <li><a href="">手作工坊</a></li>
-                    <li><a href="">烤肉方案</a></li>
+                    <li><a href="activity.html#allact">活動總覽</a></li>
+                    <li><a href="activity.html#actblock">手作工坊</a></li>
+                    <li><a href="activity.html#bbq">烤肉方案</a></li>
                 </ul>
             </li>
-            <li class="list"><a href="">小農產品</a>
+            <li class="list"><a href="shop.html">小農產品</a>
                 <ul>
-                    <li><a href="">全部商品</a></li>
-                    <li><a href="">純乳系列</a></li>
+                    <li><a href="milkshop.html">純乳系列</a></li>
                     <li><a href="">常溫點心</a></li>
                     <li><a href="">文創商品</a></li>
+                    <li><a href="">全部商品</a></li>
                 </ul>
             </li>
-            <li class="list"><a href="">常見問題</a></li>
+            <li class="list"><a href="QA.html">常見問題</a></li>
             <li class="list"><a href="">登入</a></li>
         </ul>
     </nav>
@@ -66,7 +66,7 @@
                 <button><i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
-        <div class="allact">
+        <div class="allact" id="allact">
             <div class="cloudtitle"><h2>活動總覽</h2></div>
             <div class="actblock">
                 <h3>動物互動</h3>
@@ -91,7 +91,7 @@
                         <i class="fa-solid fa-location-dot"></i>地點:山羊羊舍</p>
                 </div>
             </div>
-            <div class="actblock">
+            <div class="actblock" id="actblock">
                 <h3>手作工坊</h3>
                 <div class="card">
                     <img src="activity\cheese.jpg" alt="">
@@ -116,10 +116,8 @@
                 </div>
             </div>
         </div>
-        <div class="bbq">
-            <div class="cloudtitle"><h2>烤肉方案
-            </h2></div>
-            <img src="bar\bbqbar.jpg" alt="BBQ">
+        <div class="bbq" id="bbq">
+            <div class="cloudtitle"><h2>烤肉方案</h2></div>
             <div class="net">
                 <label for="meat">
                     <input type="checkbox" id="meat">
@@ -179,7 +177,18 @@
                 <p>所有組合均贈<br>氣泡飲料<br>水果盤<br>特調醬料</p>
             </div>
         </div>
+        .
     </main>
+    <div class="server">
+        <input type="checkbox" id="bot">
+        <label for="bot">客服羊羊</label>
+        <div class="talk">
+            <div class="header">客服羊羊</div>
+            <div class="info">
+            </div>
+            <input type="text">
+        </div>
+    </div>
     <footer>
         <div class="footer">
             <img class="star" src="back/starhalf.png">
