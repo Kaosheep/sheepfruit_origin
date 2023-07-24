@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,16 +91,26 @@
     <div class="cloudtitle" id="map"><h2>園區導覽</h2></div>
     <div class="map col-12">
         <div class="btngroup">
-            <button class="btnchangecolor"><a class="btnchangecolortxt" href=""><i class="fa-solid fa-flag"></i>羊羊廣場</a></button>
-            <button class="btnchangecolor"><a class="btnchangecolortxt" href=""><i class="fa-solid fa-house"></i>山羊羊舍</a></button>
-            <button class="btnchangecolor"><a class="btnchangecolortxt" href=""><i class="fa-solid fa-mitten"></i>手作教室</a></button>
-            <button class="btnchangecolor"><a class="btnchangecolortxt" href=""><i class="fa-solid fa-fire-burner"></i>手作廚房</a></button>
-            <button class="btnchangecolor"><a class="btnchangecolortxt" href=""><i class="fa-solid fa-cheese"></i>起司研究室</a></button>
-            <button class="btnchangecolor"><a class="btnchangecolortxt" href=""><i class="fa-solid fa-campground"></i>烤肉帳篷</a></button>
-            <button class="btnchangecolor"><a class="btnchangecolortxt" href=""><i class="fa-solid fa-store"></i>小農市集</a></button>
-            <button class="btnchangecolor"><a class="btnchangecolortxt" href=""><i class="fa-solid fa-circle-question"></i>遊客服務中心</a></button>
+            <label class="btnchangecolor" for="ground"><span class="btnchangecolortxt" ><i class="fa-solid fa-flag"></i>羊羊廣場</span></label>
+            <label for="house" class="btnchangecolor"><span class="btnchangecolortxt" href=""><i class="fa-solid fa-house"></i>山羊羊舍</span></label>
+            <label for="diy" class="btnchangecolor"><span class="btnchangecolortxt" href=""><i class="fa-solid fa-mitten"></i>手作教室</span></label>
+            <label for="kit" class="btnchangecolor"><span class="btnchangecolortxt" href=""><i class="fa-solid fa-fire-burner"></i>手作廚房</span></label>
+            <label for="cheese" class="btnchangecolor"><span class="btnchangecolortxt" href=""><i class="fa-solid fa-cheese"></i>起司研究室</span></label>
+            <label for="bq" class="btnchangecolor"><span class="btnchangecolortxt" href=""><i class="fa-solid fa-campground"></i>烤肉帳篷</span></label>
+            <label for="market" class="btnchangecolor"><span class="btnchangecolortxt" href=""><i class="fa-solid fa-store"></i>小農市集</span></label>
+            <label for="center" class="btnchangecolor"><span class="btnchangecolortxt" href=""><i class="fa-solid fa-circle-question"></i>遊客服務中心</span></label>
         </div>
-        <img src="map\map.png" alt=""></div> 
+        <div class="pin">
+            <img src="map\map.png" alt="">
+            <input type="radio" name="place" id="ground">
+            <input type="radio" name="place" id="house">
+            <input type="radio" name="place" id="diy">
+            <input type="radio" name="place" id="kit">
+            <input type="radio" name="place" id="cheese">
+            <input type="radio" name="place" id="bq">
+            <input type="radio" name="place" id="market">
+            <input type="radio" name="place" id="center">
+        </div>
     </div>
     <div class="cloudtitle" id="history"><h2>園區沿革</h2></div>
     <div class="history col-10">
