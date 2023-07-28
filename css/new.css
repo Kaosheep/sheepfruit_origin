@@ -1,4 +1,5 @@
 main ul{
+    max-width: 1200px;
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -11,28 +12,37 @@ main ul li{
     line-height: 50px;
     border-bottom:1px dashed #2C6E00 ;
     transition: .4s;
+    padding: 0px 1rem;
+}
+main ul li:nth-child(2n){
+    background-color: #FFF4E2;
 }
 main ul li p{
     text-align: center;
 }
 main ul li .s{
+    width: 13%;
+}
+main ul li .ss{
     width: 10%;
 }
 main ul li .m{
-    width: 70%;
+    width: 64%;
 }
 main ul li a{
     width: 100%;
     display: flex;
+    
 }
 main ul li a :is(.date,.tag,.view){
     text-align: center;
 }
 main ul li a *{
     vertical-align: middle;
+    color: #333;
 }
 main ul li a .date{
-    width: 10%;
+    width: 13%;
 }
 main ul li a .view{
     margin-left: auto;
@@ -43,14 +53,11 @@ main ul li a h3{
     text-overflow: ellipsis; 
     white-space: nowrap;
     overflow: hidden;
-    width: 70%;
+    width: 64%;
     font-weight: 500;
 }
-main ul li:nth-child(2n) *{
-    color: #2C6E00;
-}
 main ul li a .tag{
-    width: 10%;
+    width: 13%;
 }
 .tag{
     margin: 8px;
@@ -60,7 +67,10 @@ main ul li a .tag{
 }
 main ul li+li:hover{
     transform: translateY(-7px);
-    box-shadow: 0px 7px 0px rgb(91, 146, 55,.8);
-    background-color: #f2fff1 ;
+    box-shadow: 0px 7px 0px rgba(146, 146, 55, 0.7);
     border-top:1px solid #ccc ;
+    
+}
+main ul li:hover a *{
+    color: #2C6E00;
 }
