@@ -25,13 +25,15 @@ section ul li h3{
     display: inline-block;
     margin-bottom:10px;
 }
-section ul li label input{
+.ans{
     display: none;
-} 
-section ul li label:checked+p{
-    height: 100px;
-} 
-section ul li label>i{
+    padding-bottom: 0px; 
+    line-height: 25px;
+    font-size: 16px;
+    transition: .3s;
+    padding-bottom: 0px;
+}
+section ul li >i{
     font-size: 30px;
     color: #2C6E00;
     line-height: 30px;
@@ -41,21 +43,6 @@ section ul li label>i{
     transform: rotate(0deg);
     transition: .1s;
 } 
-section ul li label p{
-    line-height: 25px;
-    padding:0px 40px;
-    text-indent: -11px;
-    height: 0;
-    font-size: 16px;
-    transition: .4s;
-}
-section ul li label input:checked~p{
-    height: auto;
-    padding-bottom: 20px;
-}
-section ul li label input:checked+i{
-    transform: rotate(45deg);
-}
 section ul li p a{
     color: #2C6E00;
     padding: 5px;
@@ -135,10 +122,10 @@ section{
     margin-top:16px ;
     padding: 15px;
     line-height: 20px;
+    border: 2px solid #2C6E00;
 }
 .content form textarea:focus{
     outline: none;
-    border: 2px solid #2C6E00;
     caret-color: #2C6E00;
 }
 .btnchangecolor{

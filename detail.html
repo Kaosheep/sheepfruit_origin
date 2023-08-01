@@ -52,13 +52,13 @@
         </div>
         <div class="info">
             <div class="smallimg">
-               <img src="p/3656034_s.jpg" alt="">
                <img src="p/4288453_s.jpg" alt="">
+               <img src="p/3656034_s.jpg" alt="">
                <img src="p/5008692_s.jpg" alt="">
                <img src="p/3651874_s.jpg" alt="">
             </div>
             <div class="mainimg">
-            <img src="p/milk.jpg" alt=""></div>
+            <img src="p/4288453_s.jpg" alt="" id="mainimg"></div>
             <div class="txt">
                 <h2>山羊奶(500ml)</h2>
                 <p>成分:100%山羊奶<br>
@@ -143,5 +143,17 @@
         </div>
         <p>本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
     </footer>
+    <script>
+    function showLarge(e){
+    document.getElementById("mainimg").src = e.target.src;
+    }
+    function init(){
+    let imgs=document.querySelectorAll(".smallimg img")
+    for(let i=0;i<imgs.length;i++){
+        imgs[i].onclick = showLarge;
+    }
+    }
+    window.addEventListener("load", init, false);
+    </script>
 </body>
 </html>

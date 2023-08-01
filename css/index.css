@@ -10,9 +10,6 @@
     justify-content: center;
     align-items:flex-end;
 }
-.topmenu{
-    
-}
 .topmenu li{
     display: inline-block;
     margin-right:0 ;
@@ -160,6 +157,7 @@
 .new{
     width:100%;
     position: relative;
+    margin-bottom: 200px;
 }
 .new .cloudtitle{
     transform:translateY(30%);
@@ -168,21 +166,20 @@
    width: 100%;
    background-image:url("../back/green.png") ;
    padding-top: 40px;
+   text-align: center;
 }
 .sheeprow{ 
     max-width: 1280px;
     height: 100%;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 200px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100%/3);
     position: relative;
     overflow: hidden;
-    padding: 50px 0px 90px 0px;
+    padding: 50px 0px 0px;
 }
 .sheeprow .newcol{
-    width: 33%;
     padding:0 30px; 
 }
 .sheeprow .newcol a{
@@ -205,17 +202,26 @@
 .sheeprow .newcol:nth-child(2){
     transform: translateY(-50px);
 }
-.sheeprow .btn{
+.ground .btngroup{
     text-align: center;
-    position: absolute;
-    bottom:90px;
-    width: 137px;
+    display: inline-block;
 }
-.sheeprow .btn button+button{
-    margin-left: 80px;
+.ground .btngroup .btn *{
+    margin: 0 3px;
+    cursor: pointer;
 }
-.sheeprow .btnchangecolor{
-    bottom: 1rem;
+.ground .btngroup .btn>i{
+    color: #fff;
+    text-shadow:0 5px 3px rgba(84, 84, 84, 0.6);
+    line-height: 24px;
+    transition: .2s;
+}
+.ground .btngroup .btn>i:hover{
+    text-shadow: 0px 0px 0px;
+    color: #FFF4E2;
+}
+.ground .btngroup .btnchangecolor{
+    margin: 10px auto;
 }
 .activity{
     position: relative;
@@ -227,6 +233,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 1000px;
+    text-align: center;
 }
 .act .card{
     width: 100%;
@@ -256,22 +263,18 @@
     background:no-repeat center/100% url("../back/cloud.png");
     font-size: 1.25rem;
 }
-.act>.btnchangecolor{
-    right: 50%;
-    bottom: 0;
-    transform: translate(50%, 200%);
+.activity .more{
+    margin:30px auto 0px;
 }
 .shop .sum{
-    margin:70px auto;
+    margin:50px auto 30px;
     position: relative;
 }
 .shop .sum img{
     object-position: center;
 }
-.shop .sum .more{
-    right: 50%;
-    bottom: 0;
-    transform: translate(50%, 200%);
+.shop .more{
+    margin:20px auto;
 }
 .goshop{
     padding: 20px;
@@ -298,34 +301,79 @@
     margin: auto;
 }
 .mapblock{
-    position: relative;
+    display: flex;
+    max-width: 1100px;
 }
 .mapblock .mapcard{
     height: 360px;
-    width: 486px;
-    top: 0;
-    bottom: 0;
+    width: 50%;
     margin: auto;
-    padding: 0 50px;
     background-image: url('../back/green.png');
-    position: absolute;
     border-radius: 10px;
+    padding: 0 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+    margin-right:-5%;
+    z-index: 1;
+    
 }
 .mapcard p{
-    line-height: 32px;
+    line-height: 1.5rem;
+    text-align: justify;
 }
 .mapcard h3{
     font-size: 20px;
     padding-bottom:20px ;
 }
 .mapblock .map{
-    margin-left: auto;
-    width: 505px;
-    height: 400px;
+    width: 55%;
+    height: 450px;
     border-radius:10px ;
     overflow: hidden;
+    flex-shrink: 0;
+}
+.mapblock .map iframe{
+    width: 100%;
+    height: 100%;
+    
+}
+@media screen and (max-width:768px){
+.mapblock{
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+}
+.mapblock .map{
+    width: 100%;
+    margin: auto;
+    height:45vh;
+}
+.mapblock .mapcard{
+    margin: auto;
+    width: 100%;
+    height:45vh;
+    line-height: 1.5rem;
+}
+.goshop{
+    max-width: 400px;
+    padding: 1.25rem;
+    width: 80%;
+    margin: auto; 
+    transform: translateY(-50%);
+    border-radius: 50px;
+}
+.sheeprow{
+    justify-content: center;
+    height: 70vh;
+}
+.sheeprow .newcol:is(:first-child,:last-child){
+    display: none;
+}
+.sheeprow .newcol:nth-child(2){
+    width: 100%;
+    transform: translateY(0px);
+}
 }
