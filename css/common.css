@@ -4,7 +4,6 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
-    
 }
 body{
     background-image: url("../back/blue.jpg");
@@ -36,7 +35,6 @@ nav{
     top: 0;
     box-shadow: 0 8px 4px  rgba(81, 96, 110,.6);
     z-index: 5;
-    
 }
 .navmenu{
     display: flex;
@@ -190,9 +188,7 @@ footer h3{
     font-size: 20px;
     transition: .2s;
 }
-.footer .social i:hover{
-    color: #2C6E00;
-}
+
 .totop{
     height: 93px;
     width: 78px;
@@ -223,7 +219,6 @@ footer h3{
     height: 300px;
     top: 0;
     bottom: 0;
-    margin:auto;
     position: fixed;
     right: 5px;
     z-index: 7;
@@ -268,7 +263,7 @@ footer h3{
     position: fixed;
     right: 0;
     bottom: 20px;
-    z-index: 6;
+    z-index: 10;
     cursor: pointer;
 }
 .server label{
@@ -328,11 +323,12 @@ footer h3{
 #bot:checked~.talk{
 transform: scale(1);
 }
-#bot:checked+label,
-.server:hover>label{
+#bot:checked+label{
     background: no-repeat center/100% url("../logo/serviceopen.svg")
     ;
 }
+
+
 /* 圓按鈕 */
 .btn button{
     width: 24px;
@@ -344,10 +340,7 @@ transform: scale(1);
     transition: .2s;
     cursor: pointer;
 }
-.btn button:hover{
-    box-shadow:inset 1px 2px 4px rgba(84, 84, 84, 0.6);
-    background-color: #FFF4E2;
-}
+
 .product{
     position: relative;
 }
@@ -368,6 +361,7 @@ transform: scale(1);
     background-position: 100% 100%;
     transition: .4s;
     cursor: pointer;
+    height: 1.5rem;
 }
 .btnchangecolortxt{
     color:transparent;
@@ -377,11 +371,9 @@ transform: scale(1);
     background-clip: text;
     -webkit-background-clip: text;
     transition: .4s;
-    vertical-align: bottom;
+    line-height: 1.5rem;
 }
-.btnchangecolor:hover{
-    background-position: 0% 0%;
-}
+
 .btnchangecolor:hover .btnchangecolortxt{
     background-position: 0% 0%;
 }
@@ -389,11 +381,11 @@ transform: scale(1);
 .more{
     width: 110px;
     border-radius: 20px;
+    height:1.5rem;
 }
 .more a{
     font-size: 14px;
-    line-height:24px;
-    vertical-align: middle;
+    line-height:1.5rem;
 }
 .more a i{
     font-size: 12px;
@@ -416,7 +408,7 @@ transform: scale(1);
 }
 .product{
     margin: auto;
-    width: 88%;
+    max-width:1100px;
     height: 220px;
     display: flex;
     justify-content: flex-start;
@@ -504,10 +496,34 @@ form select{
    padding: 3px 0;
    border-radius:10px;
 }
+@media screen and (hover:hover){
+.btnchangecolor:hover{
+    background-position: 0% 0%;
+}
+.server:hover>label{
+    background: no-repeat center/100% url("../logo/serviceopen.svg")
+    ;
+}
+.footer .social i:hover{
+    color: #2C6E00;
+}
+.btn button:hover{
+    box-shadow:inset 1px 2px 4px rgba(84, 84, 84, 0.6);
+    background-color: #FFF4E2;
+}
+}
 @media screen and (max-width:768px){
     .cloudtitle{
         font-size: 1.2rem;
         height: 200px;
         text-align: center;
+    }
+    .path{
+        display: none;
+    }
+}
+@media screen and (max-width:400px){
+    .shop .product{
+        width: 220px;
     }
 }

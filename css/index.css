@@ -49,41 +49,48 @@
     width: 40%;
 }
 .bar{
-   max-width: 1200px;
+    max-width: 1100px;
    margin: auto;
    position: relative;
+   display: flex;
 }
 .vedio{
-    max-width: 900px;
-    height:584px;
+    width: 75%;
+    height:100%;
     display: flex;
     position: relative;
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
+    margin: auto;
+    aspect-ratio: 9/6;
 }
 .vedio video{
-    height:500px ;
+    width: 100%;
+    height:100%;
 }
 .vedio img{
     position: absolute;
     height: 100%;
+    width: 100%;
 }
 .bar .txt{
     width: 50%;
     background:no-repeat center/100% url("../back/cloud.png");
     opacity: .8;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    margin-right: -25%;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-shrink: 0;
+}
+.bar .txt h1{
+    font-size: 2rem;
+}
+.bar .txt h2{
+    font-size: 1.5rem;
 }
 .bar::before{
     content: "";
@@ -92,9 +99,9 @@
     left: -40px;
     background:no-repeat center/100% url("../back/cloud.png");
     background-size: contain;
-    width: 200px;
-    height: 200px;
-    z-index: 2;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
 }
 .bar::after{
     content: "";
@@ -114,13 +121,10 @@
     justify-content:space-around;
 }
 .item{
+    margin: auto;
+    position: relative;
     width: 30%;
-    border: 5px solid white;
-    border-radius:53% 47% 35% 65% / 61% 59% 41% 39%;
-    overflow: hidden;
     transition: .3s ;
-    box-shadow: 8px 8px 8px rgba(40, 68, 117,.5);
-    aspect-ratio: 6/7;
 }
 .item p{
     font-size: 1.25rem;
@@ -133,26 +137,26 @@
     text-align: center;
     line-height: 100px;
     z-index: 2;
-    transition: .2s;
+    transition: .3s;
     transform: scale(1);
+}
+.item span{
+    display: block;
+    border: 5px solid white;
+    overflow: hidden;
+    border-radius:53% 47% 35% 65% /61% 59% 41% 39%;
+    aspect-ratio: 6/7;
+    transition: .2s;
+    box-shadow: 8px 8px 8px rgba(40, 68, 117,.5);
 }
 .item img{
     height:100%;
     width: 100%;
     object-fit: cover;
-    object-position: left;
+    object-position: center;
     display: block;
     transform: scale(1);
-    transition: .5s;
-}
-.item:hover{
-    border-radius:52% 48% 51% 49% / 66% 32% 68% 34%;
-}
-.item:hover img{
-    transform: scale(1.1);
-}
-.item:hover p{
-    transform: scale(1.1);
+    transition: .4s;
 }
 .new{
     width:100%;
@@ -216,10 +220,7 @@
     line-height: 24px;
     transition: .2s;
 }
-.ground .btngroup .btn>i:hover{
-    text-shadow: 0px 0px 0px;
-    color: #FFF4E2;
-}
+
 .ground .btngroup .btnchangecolor{
     margin: 10px auto;
 }
@@ -273,25 +274,27 @@
 .shop .sum img{
     object-position: center;
 }
+
 .shop .more{
     margin:20px auto;
 }
-.goshop{
-    padding: 20px;
+.shop .goshop.btnchangecolor{
     width: 400px;
     margin: auto; 
     transform: translateY(-50%);
     border-radius: 50px;
+    height: 3rem;
 }
-.goshop a{
+.goshop .btnchangecolortxt{
     text-align: center;
     letter-spacing: 5px;
     font-size: 1.25rem;
+    line-height: 3rem;
 }
 .goshop a i{
     color: transparent;
     margin-right: 10px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 .contact{
     margin-top: 150px;
@@ -318,7 +321,6 @@
     flex-shrink: 0;
     margin-right:-5%;
     z-index: 1;
-    
 }
 .mapcard p{
     line-height: 1.5rem;
@@ -338,9 +340,41 @@
 .mapblock .map iframe{
     width: 100%;
     height: 100%;
-    
 }
-@media screen and (max-width:768px){
+@media screen and (hover:hover){
+.item:hover span{
+    border-radius:52% 48% 51% 49% / 66% 32% 68% 34%;
+}
+.item:hover span img{
+    transform: scale(1.1);
+}
+.item:hover p{
+    transform: scale(1.1);
+}
+.ground .btngroup .btn>i:hover{
+    text-shadow: 0px 0px 0px;
+    color: #FFF4E2;
+}
+}
+@media screen and (max-width:767px){
+.bar{
+    width: 100%;
+}
+.vedio{
+    width: 100%;
+}
+.bar .txt{
+    width: 100%;
+    opacity: 1;
+    text-shadow: -3px -3px 4px #fff,
+    3px 3px 4px #fff;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background: none;
+}
+
 .mapblock{
     display: flex;
     flex-direction: column;
@@ -358,7 +392,7 @@
     line-height: 1.5rem;
 }
 .goshop{
-    max-width: 400px;
+    max-width: 50%;
     padding: 1.25rem;
     width: 80%;
     margin: auto; 
@@ -375,5 +409,51 @@
 .sheeprow .newcol:nth-child(2){
     width: 100%;
     transform: translateY(0px);
+}
+.sum{
+    margin:100px auto 100px;
+    position: relative;
+    display:flex ;
+    flex-direction: column;
+}
+.item{
+    padding: 1rem 0px;
+    height: 25vh;
+    width: 80%;
+    aspect-ratio:auto;
+}
+.item img{
+    border-radius:200px;
+    overflow: hidden;
+}
+.item p{
+    background-color: transparent;
+    font-size: 2.5rem;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 5px;
+    text-shadow: -1px -1px 5px #fff,
+    1px 1px 5px #fff;
+}
+}
+
+@media screen and (max-width:400px){
+.bar .vedio{
+    z-index: 1;
+}
+.item {
+    width: 90%;
+    height: 20vh;
+}
+.item span{
+    border-radius:200px;
+    overflow: hidden;
+    aspect-ratio:auto;
+}
+.bar::after{
+    width: 50px;
+    height: 50px;
 }
 }
