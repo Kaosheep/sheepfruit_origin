@@ -76,37 +76,48 @@ let monavbar = document.querySelector('.monavbar');
 let monavlogo = document.getElementById('monavlogo');
 let center=document.querySelector('.center')
 
-// window.addEventListener("resize", function(){
-// 	moveCenter();
-// })
-
-
 
 let close = document.getElementById('close');
 let momenu = document.querySelector('.momenu');
+let liElements = document.querySelectorAll('.momenu li');
 
+let liaElements = document.querySelectorAll('.momenu li a');
 
-opennav.onclick = ()=>{
-    monavbar.style.display= 'none';
-    momenu.classList.add('active');
-    monav.classList.add('openm');
-    momenu.classList.add('momenuopen');
-    momenu.style.transform = 
-    `translate(${(window.innerWidth - 300)/2}px, ${(window.innerHeight - 300)/2}px)`
-    center.style.transform =`translateY(75px)` 
+opennav.addEventListener("click", function(event) {
+
+    event.stopPropagation();
+    monavbar.classList.add('small');
+    setTimeout(() => {
+    liElements.forEach(liElement => {
+        liElement.style.opacity = '1';
+    });
+    monav.classList.add('open');
+    momenu.classList.add('active');    
+    },300)
+
+});
+
+monav.addEventListener("click", function() {
     
-    console.log(window.innerWidth,window.innerHeight,monavlogo.offsetHeight)
-}
+    momenu.classList.remove('active');
+    setTimeout(() => {
+        monav.classList.remove('open');
+        monavbar.classList.remove('small');
+        liElements.forEach(liElement => {
+            liElement.style.opacity = '0';
+        });
+    }, 800);
+});
 
 close.addEventListener("click",()=>{
-    center.style.transform =`translateY(-75px)`
-    momenu.style.transform = 
-    `translate(-${(window.innerWidth - 300)/2}px, -${(window.innerHeight - 300)/2}px)`
-    momenu.classList.remove('momenuopen')
-    monav.classList.remove('openm');
     momenu.classList.remove('active');
-    
-    
+    setTimeout(() => {
+        monav.classList.remove('open');
+        monavbar.classList.remove('small');
+        liElements.forEach(liElement => {
+            liElement.style.opacity = '0';
+        });
+    }, 800);
+        
 })
-
 
