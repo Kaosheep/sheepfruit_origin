@@ -1,14 +1,11 @@
 .wrap{
     height:100vh;
-    overflow-x: hidden;
+    width: 100%;
+    overflow: hidden;
     position: relative;
-}
-.para{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:flex-end;
+    background-image: url('../back/paraback.jpg');
+    background-position: center;
+    background-size: cover;
 }
 .topmenu li{
     display: inline-block;
@@ -17,25 +14,33 @@
 #moun{
     left:0;
     width: 100vw;
-    position: absolute;
-    bottom: 17%;
-}
-#floor{
-    width: 100vw;
-    object-fit: cover;
+    max-height:40vh;
+    min-height: 20vh;
     position: absolute;
     bottom: 0;
+    object-fit: fill;
+    z-index: 1;
+}
+#floor{
+    width: 100%;
+    object-fit:cover;
+    position: absolute;
+    bottom: 0;
+    min-height: 220px;
+    object-position: right bottom;
+    z-index: 3;
 }
 #paralogo{
     width: 55%;
     position: absolute;
     right: 50%;
-    top: 20%;
-    transform: translateX(50%);
+    top: 50%;
+    transform: translate(50%, -65%);
     z-index: 2;
 }
 #cr{
     position: absolute;
+    right: 0;
     width: 35%;
     top: 10%;
     z-index: 2;
@@ -48,11 +53,85 @@
     left: 0;
     width: 40%;
 }
+.wrap::-webkit-scrollbar{
+    display: none;
+}
+.wrap .fa-angles-down{
+    position: absolute;
+    bottom:15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-size: 1.5rem;
+    color: #2C6E00;
+    transition: .3s;
+    animation: godown .5s 0s linear infinite alternate;
+}
+@keyframes godown {
+    0%{transform: translateY(0);}
+    100%{transform: translateY(10px)}
+}
+.topmenu{
+    position: relative;
+    z-index: 2;
+    text-align: end;
+    padding: 15px 20px;
+}
+.topmenu li{
+    padding: 0px 10px;
+    border-radius: 50px;
+    transition: .3s;
+}
+.topmenu li a{
+    display: inline-block;
+    line-height: 1.8rem
+}
+.topmenu li:hover{
+    background-color: #fff;
+}
+.wrap .shop{
+    z-index: 4;
+    width: 170px;
+    height: 170px;
+    background-color: #2C6E00;
+    border-radius: 100px;
+    padding: 55px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    box-shadow: 0px 5px 5px rgba(81, 96, 110,.5);
+}
+.wrap .shop i{
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 9px;
+}
+.wrap .shop p{
+    color: #fff;
+    font-size: 1.25rem;
+}
+.wrap .shop::after{
+    content: "";
+    background-image: url(../item/shop.png);
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 150px;
+    height: 150px;
+    transform-origin: center;
+    animation: rotate360 7s 0s linear infinite;
+    z-index: -1;
+}
+@keyframes rotate360 {
+    0%{transform: translate(50% ,-50%) rotate(0deg);}
+    100%{transform:translate(50% ,-50%)  rotate(360deg);}
+}
 .bar{
     max-width: 1100px;
-   margin: auto;
-   position: relative;
-   display: flex;
+    margin: auto;
+    position: relative;
+    display: flex;
 }
 .vedio{
     width: 75%;
@@ -66,8 +145,8 @@
     aspect-ratio: 9/6;
 }
 .vedio video{
-    width: 100%;
-    height:100%;
+    width: 99%;
+    height:99%;
 }
 .vedio img{
     position: absolute;
@@ -153,7 +232,7 @@
     height:100%;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position:right;
     display: block;
     transform: scale(1);
     transition: .4s;
@@ -274,22 +353,26 @@
 .shop .sum img{
     object-position: center;
 }
-
 .shop .more{
     margin:20px auto;
+}
+.productwrap{
+    padding:30px 0 60px;
 }
 .shop .goshop.btnchangecolor{
     width: 400px;
     margin: auto; 
     transform: translateY(-50%);
     border-radius: 50px;
-    height: 3rem;
+    height: auto;
 }
 .goshop .btnchangecolortxt{
+    
+    display: block;
     text-align: center;
     letter-spacing: 5px;
     font-size: 1.25rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
 }
 .goshop a i{
     color: transparent;
@@ -357,6 +440,12 @@
 }
 }
 @media screen and (max-width:767px){
+.topmenu{
+    text-align: center;
+}
+.wrap{
+    background-size: cover;
+}
 .bar{
     width: 100%;
 }
@@ -384,12 +473,14 @@
     width: 100%;
     margin: auto;
     height:45vh;
+    border-radius: 0px;
 }
 .mapblock .mapcard{
     margin: auto;
     width: 100%;
     height:45vh;
     line-height: 1.5rem;
+    border-radius: 0px;
 }
 .goshop{
     max-width: 50%;
@@ -411,49 +502,46 @@
     transform: translateY(0px);
 }
 .sum{
-    margin:100px auto 100px;
-    position: relative;
-    display:flex ;
+    margin:100px auto;
     flex-direction: column;
 }
 .item{
     padding: 1rem 0px;
-    height: 25vh;
     width: 80%;
-    aspect-ratio:auto;
+    transition: .3s ;
+    margin-bottom: 1rem;
 }
-.item img{
-    border-radius:200px;
-    overflow: hidden;
+.item:hover span{
+    border-radius:100px;
+}
+.item:hover p{
+    transform:translate(-50%, -50%) scale(1.1); 
+}
+.item span{
+    height: 20vh;
+    border-radius:100px;
+    aspect-ratio: auto;
 }
 .item p{
     background-color: transparent;
     font-size: 2.5rem;
-    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     letter-spacing: 5px;
     text-shadow: -1px -1px 5px #fff,
     1px 1px 5px #fff;
-}
+    line-height: 20vh;
+    vertical-align: middle;
+    width: auto;
+    height: auto;
 }
 
+}
 @media screen and (max-width:400px){
-.bar .vedio{
-    z-index: 1;
-}
-.item {
-    width: 90%;
-    height: 20vh;
-}
-.item span{
-    border-radius:200px;
-    overflow: hidden;
-    aspect-ratio:auto;
-}
+
 .bar::after{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 }

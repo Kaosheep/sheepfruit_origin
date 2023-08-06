@@ -6,7 +6,11 @@ let arrows = document.querySelectorAll(".btn button");
 const objectwidth = products.querySelector(".object").offsetWidth;
 
 let productschildrens = [...products.children];
+
 let preview = Math.round(products.offsetWidth/objectwidth);
+
+addEventListener("resize", (event) => {products.style.width = (parseInt(Math.floor(document.querySelector('.productwrap').offsetWidth/objectwidth) * objectwidth))+'px';});
+
 
 productschildrens.slice(-preview).reverse().forEach(product=>{
     products.insertAdjacentHTML("afterbegin",product.outerHTML);
@@ -64,3 +68,45 @@ document.addEventListener("mouseup",dragStop);
 products.addEventListener("scroll",infinitescroll);
 productwrap.addEventListener("mouseenter",()=>clearTimeout(timeoutid));
 productwrap.addEventListener("mouseleave",autoplay);
+
+// -----------行動nav
+let monav = document.querySelector('.monav');
+let opennav = document.getElementById('opennav');
+let monavbar = document.querySelector('.monavbar');
+let monavlogo = document.getElementById('monavlogo');
+let center=document.querySelector('.center')
+
+// window.addEventListener("resize", function(){
+// 	moveCenter();
+// })
+
+
+
+let close = document.getElementById('close');
+let momenu = document.querySelector('.momenu');
+
+
+opennav.onclick = ()=>{
+    monavbar.style.display= 'none';
+    momenu.classList.add('active');
+    monav.classList.add('openm');
+    momenu.classList.add('momenuopen');
+    momenu.style.transform = 
+    `translate(${(window.innerWidth - 300)/2}px, ${(window.innerHeight - 300)/2}px)`
+    center.style.transform =`translateY(75px)` 
+    
+    console.log(window.innerWidth,window.innerHeight,monavlogo.offsetHeight)
+}
+
+close.addEventListener("click",()=>{
+    center.style.transform =`translateY(-75px)`
+    momenu.style.transform = 
+    `translate(-${(window.innerWidth - 300)/2}px, -${(window.innerHeight - 300)/2}px)`
+    momenu.classList.remove('momenuopen')
+    monav.classList.remove('openm');
+    momenu.classList.remove('active');
+    
+    
+})
+
+

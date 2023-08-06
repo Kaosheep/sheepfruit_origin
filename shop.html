@@ -53,7 +53,7 @@
             <img src="p\spot\food_raclette_cheese.png" alt="">
             <div class="txt">
                 <h2>可追溯是我們的承諾</h2>
-                <p>每一個產品都可以追溯到其種植或飼養的來源，確保您可以放心品嚐到源自純淨土地的美味。</p>
+                <p>每一個產品都可以追溯到種植或飼養的來源，確保您可以放心品嚐到源自純淨土地的美味。</p>
             </div>
             <img src="p\spot\milk_bin.png" alt="">
             <p>高品質</p>
@@ -64,34 +64,38 @@
     <div class="shop" id="shop">
         <div class="sum">
             <div class="item">
-                <p>純乳</p>
-                <a href="milkshop.html"><img src="p/milk.jpg"></a>
-                <h3>純乳系列</h3>
+                <a href=""><p>純乳</p>
+                <span><img src="p/shopbar.jpg"></span></a>
             </div>
             <div class="item">
-                <p>零食</p>
-                <a href=""><img src="p\23955063_s.jpg"></a>
-                <h3>常溫零食</h3>
+                <a href=""><p>零食</p>
+                <span><img src="p\23955063_s.jpg"></span></a>
             </div>
             <div class="item">
-                <p>文創</p>
-                <a href=""><img src="p\24846460_s.jpg"></a>
-                <h3>文創商品</h3>
+                <a href=""><p>文創</p>
+                <span><img src="p\24846460_s.jpg"></span></a>
             </div>
-            <div class="more btnchangecolor">
-                <a class="btnchangecolortxt" href="">全部商品<i class="btnchangecolortxt fa-solid fa-angles-right"></i></a></div>
         </div>
+        <div class="more btnchangecolor">
+            <a class="btnchangecolortxt" href="shop.html">全部商品<i class="btnchangecolortxt fa-solid fa-angles-right"></i></a>
+        </div>
+        <div class="productwrap">
         <div class="product">
-            <div class="object"><a href=""><img src="p\cookie.png"></a></div>
-            <div class="object"><a href=""><img src="p\milk2.png"></a></div>
-            <div class="object"><a href=""><img src="p\macaro.png"></a><h4>冰淇淋馬卡龍</h4></div>
-            <div class="object"><a href=""><img src="p/milk.png"></a></div>
-            <div class="object"><a href=""><img src="p\mocha.png"></a></div>
-            <div class="btn ">
-                <button><i class="fa-solid fa-arrow-left"></i></button>
-                <button><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
+            <div class="object"><a href=""><img src="p/cookie.png" draggable="false"><p>羊奶餅乾</p></a></div>
+            <div class="object"><a href=""><img src="p/milk2.png" draggable="false"><p>咖啡羊奶</p></a></div>
+            <div class="object"><a href=""><img src="p/macaro.png" draggable="false"><p>冰淇淋馬卡龍</p></a></div>
+            <div class="object"><a href=""><img src="p/milk.png" draggable="false"><p>羊奶</p></a></div>
+            <div class="object"><a href=""><img src="p/mocha.png" draggable="false"><p>抹茶冰淇淋</p></a></div>
+            <div class="object"><a href=""><img src="p/pudding.png" draggable="false"><p>羊奶布丁</p></a></div>
+            <div class="object"><a href=""><img src="p/manjyu.png" draggable="false"><p>羊奶饅頭</p></a></div>
+            <div class="object"><a href=""><img src="p/manjyu2.png" draggable="false"><p>日式饅頭</p></a></div>
+        </div>    
+        <div class="btn">
+            <button id="left"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="right"><i class="fa-solid fa-arrow-right" ></i></button>
         </div>
+        </div>
+    </div>
         <div class="server">
             <input type="checkbox" id="bot">
             <label for="bot">客服羊羊</label>
@@ -124,5 +128,6 @@
             </div>
             <p>本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
         </footer>
+        <script src="js/common.js"></script>
 </body>
 </html>
