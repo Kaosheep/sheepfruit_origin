@@ -325,3 +325,18 @@ tr td:first-child{
     grid-column:3/5 ;
     grid-row:2/4 ;
 }
+@media screen and (max-width:768px){
+    .map{
+        flex-direction: column;
+    }
+    .map .btngroup{
+        width: 100%;
+        flex-direction:row;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    }
+    .map .btngroup label{
+        margin: 0 0 0.5rem;
+        width: 22%;
+    }
+}
