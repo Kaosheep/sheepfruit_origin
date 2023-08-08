@@ -4,6 +4,7 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scroll-padding-top: 60px;
 }
 body{
     background-image: url("../back/blue.jpg");
