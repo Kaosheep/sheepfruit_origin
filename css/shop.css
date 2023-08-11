@@ -156,6 +156,7 @@ section{
 .spot .txt{
     padding: 0.5rem 1rem;
     width: 70%;
+    height: auto;
     grid-column: 1/5;
 }
 .spot p:nth-child(6n+1){
@@ -202,7 +203,7 @@ section{
 }
 @media screen and (max-width:400px) {
     .spot .txt{
-        width: 80%;
+        width: 100%;
     }
     .spot> p{
         font-size: 1.2rem;

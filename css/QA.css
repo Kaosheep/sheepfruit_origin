@@ -2,9 +2,9 @@
     object-position:center;
 }
 section{
+    width: 83%;
     max-width: 1200px;
-    margin: auto;
-    margin-bottom: 100px;
+    margin:0px auto 100px;
 }
 section .libar{
     max-width: 900px;
@@ -109,8 +109,8 @@ section ul li .ques .fa-quora{
     caret-color: #2C6E00;
 }
 .content form .inputstyle:first-child{
-    width: 30%;
-    margin-right:9%;
+    width: 35%;
+    margin-right:2%;
 }
 .content form .inputstyle:nth-child(2){
     width: 60%;
@@ -144,6 +144,9 @@ section ul li .ques .fa-quora{
     font-size:16px;
 }
 @media screen and (max-width:768px){
+section{
+    width: 90%;
+}
 section ul{
     max-width: 600px;
     padding:0px ;
@@ -151,13 +154,37 @@ section ul{
 .env{
     width: 80%;
 }
+.inputstyle input{
+    height:1.7rem;
+}
+.inputstyle label{
+    font-size: 0.8rem;
+    line-height:1.4rem;
+}
 }
 @media screen and (max-width:400px){
+section{
+    width: 100%;
+}
 .env{
     width: 100%;
 }
 .content form .inputstyle:first-child{
     margin-right:0px;
+}
+section ul li h3{
+    font-size: 1;
+    line-height: 1.5rem;
+}
+section ul li .fa-circle-plus{
+    font-size: 1.5rem;
+}
+.inputstyle input{
+    height:1.6rem;
+}
+.inputstyle label{
+    font-size: 0.8rem;
+    line-height:1.25rem;
 }
 }
 .quesclose{

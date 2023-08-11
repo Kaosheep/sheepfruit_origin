@@ -1,5 +1,6 @@
 main ul{
     max-width: 1200px;
+    width: 83.33%;
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -32,7 +33,6 @@ main ul li .m{
 main ul li a{
     width: 100%;
     display: flex;
-    
 }
 main ul li a :is(.date,.tag,.view){
     text-align: center;
@@ -60,9 +60,6 @@ main ul li a .tag{
     width: 13%;
 }
 .tag{
-    margin: 8px;
-    line-height: 34px;
-    border-radius: 30px;
     color: #333;
 }
 main ul li+li:hover{
@@ -73,4 +70,76 @@ main ul li+li:hover{
 }
 main ul li:hover a *{
     color: #2C6E00;
+}
+@media screen and (max-width:768px){
+    main ul{
+        width: 95%;
+    }
+    main ul li a{
+        flex-wrap: wrap;
+        line-height: 50px;
+    }
+    main ul li{
+        height:fit-content;
+    }
+    main ul li a h3{
+        display: block;
+        width: 85%;
+        flex-shrink: 0;
+    }
+    main ul li a .date{
+        width: 25%;
+        text-align: start;
+        border-bottom:1px dashed #2C6E00 ;
+    }
+    main ul li a .tag{
+        width: 75%;
+        flex-shrink: 0;
+        text-align: start;
+        border-bottom:1px dashed #2C6E00 ;
+    }
+    main ul li a .view{
+        width: 15%;
+    }
+    main ul li .s{
+        width: 25%;
+        text-align: start;
+    }
+    main ul li .ss{
+        width: 15%;
+    }
+    main ul li .m{
+        width: 35%;
+        text-align: start;
+    }
+}
+@media screen and (max-width:400px){
+    main ul{
+        width: 100%;
+        border-radius: 0;
+    }
+    main ul li{
+        padding: 0px 0.5rem;
+    }
+    main ul li>p{
+        font-size: 0.8rem;
+    }
+    main ul li a{
+        flex-wrap: wrap;
+        line-height: 2rem;
+    }
+    main ul li a .date{
+        width: 38%;
+        font-size: 0.9rem;
+    }
+    main ul li a .tag{
+        width: 62%;
+        font-size: 0.9rem;
+    }
+    main ul li :is(.s,.ss,.m){
+        text-align: center;
+        width: 25%;
+        line-height: 2rem;
+    }
+
 }

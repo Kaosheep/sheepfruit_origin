@@ -4,8 +4,9 @@
     overflow: hidden;
     position: relative;
     background-image: url('../back/paraback.jpg');
-    background-position: center;
+    background-position:center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .topmenu li{
     display: inline-block;

@@ -11,12 +11,14 @@ main{
     margin-bottom: 100px;
 }
 aside{
-    width: 282px;
+    width: 20%;
+    padding: 0 16px;
     height: 530px;
     margin-right: 24px;
 }
 aside .btnchangecolor{
-    width: 180px;
+    max-width: 180px;
+    width: 100%;
     height: 40px;
     border-radius: 150px;
     padding: 5px 0;
@@ -27,13 +29,14 @@ aside .btnchangecolor{
     line-height: 30px;
 }
 aside .search{
-    width: 180px;
+    max-width: 180px;
+    width: 100%;
     margin: auto;
     font-size: 0;
     margin-top: 100px;
 }
 aside .search input{
-    width: 145px;
+    width: 70%;
     border:1px solid rgb(44, 110, 0);
     border-right:none ;
     font-size: 1rem;
@@ -44,7 +47,7 @@ aside .search input{
     color: rgb(44, 110, 0);
 }
 aside .search button{
-    width: 33.5px;
+    width:30%;
     border: none;
     font-size: 1rem;
     background-color: #fff;
@@ -52,6 +55,8 @@ aside .search button{
     border-left:none ;
     border-radius: 0px 100px 100px 0px;
     line-height: 33.5px;
+    height: 35px;
+    cursor: pointer;
 }
 aside .search button i{
     color: rgb(44, 110, 0);
@@ -61,7 +66,7 @@ aside .search button i{
     caret-color: rgb(44, 110, 0);
 }
 section{
-    width: 794px;
+    width: 75%;
     display: grid;
     grid-template-columns:repeat(3,1fr) ;
     grid-template-rows:repeat(4,230px) ;
@@ -89,4 +94,167 @@ transition: .2s;
 }
 section .item:hover img{
     transform: scale(1.1);
+}
+.searchbox{
+    display: none;
+}
+@media screen and (max-width:768px){
+    main{
+        width: 100%;
+        flex-direction: column;
+    }
+    aside{
+        width: 100%;
+        height: auto;
+        margin:0 0 2rem;
+        text-align: center;
+    }
+    aside .btnchangecolor{
+        display: inline-block;
+        width: 20%;
+        height: 2rem;
+        margin-top: 0px;
+        padding: 0;
+    }
+    aside .btnchangecolor+.btnchangecolor{
+        margin-left: 5px;
+    }
+    .btnchangecolor a{
+        line-height: 2rem;
+    }
+    aside .search{
+        display: inline-block;
+        width: 10%;
+        margin-top:0 ;
+    }
+    aside .search input{
+        display: none;
+        height: 2rem;
+    }
+    aside .search button{
+        width: 2rem;
+        height: 2rem;
+        border-left:1px solid rgb(44, 110, 0);
+        border-radius: 50%;
+    }
+    .searchbox{
+        display: block;
+        position: fixed;
+        z-index: 22;
+        top: 40%;
+        left: 100%;
+        font-size: 0;
+        background-color: rgba(187, 187, 187, 0.3);
+        backdrop-filter: blur(10px);
+        width: 300px;
+        height: 200px;
+        text-align: center;
+        padding-top: 60px;
+        border-radius:10px 0 0 10px ;
+        transition: .3s;
+        transform: translateX(0%);
+    }
+    .searchbox>i{
+        color: rgb(44, 110, 0);
+        font-size: 1.5rem;
+        position: absolute;
+        top: 5%;
+        left: 4%;
+    }
+    .searchbox input{
+        width: 145px;
+        border:1px solid rgb(44, 110, 0);
+        border-right:none ;
+        font-size: 1rem;
+        vertical-align:bottom;
+        height: 2rem;
+        border-radius: 100px 0px 0px 100px;
+        padding: 5px 10px;
+        color: rgb(44, 110, 0);
+    }
+    .searchbox button{
+        width: 33.5px;
+        border: none;
+        font-size: 1rem;
+        background-color: #fff;
+        border:1px solid rgb(44, 110, 0);
+        border-left:none ;
+        border-radius: 0px 100px 100px 0px;
+        line-height: 2rem;
+        height: 2rem;
+    }
+    .searchbox button i{
+        color: rgb(44, 110, 0);
+    }
+    .search input:focus{
+        outline: none;
+        caret-color: rgb(44, 110, 0);
+    }
+    .searchbox p{
+        padding-top: 0.4rem;
+        font-size: 0.8rem;
+    }
+    .searchbox p a{
+        color: rgb(44, 110, 0);
+        padding: 0 0.2rem;
+    }
+    .searchbox .fa-circle-xmark{
+        cursor: pointer;
+    }
+    section{
+        margin: auto;
+        width: 90%;
+        grid-template-columns:repeat(2,1fr) ;
+        gap: 1rem;
+    }
+    section .item h2{
+        font-size: 16px;
+        margin: 5px;
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width:400px){
+    .searchbox{
+        top:30%;
+        width: 100vw;
+        padding-top: 15%;
+        padding-top: 70px;
+    }
+    .searchbox p {
+        margin: auto;
+        width: 80%;
+    }
+    .searchbox p a{
+        display: inline-block;
+    }
+    .searchbox>i{
+        left: 10%;
+    }
+    aside .btnchangecolor{
+        max-width: 60px;
+        height: fit-content;
+        padding: 5px;
+        border-radius: 50%;
+        text-align: center;
+        background:linear-gradient(45deg,#ffffff 50%,#ffffff 50%);
+    }
+    aside .btnchangecolortxt{
+        padding: 0px 5px;
+        display: inline-block;
+        line-height: 25px;
+        color:transparent;
+        background:linear-gradient(45deg,#2c6e00 50%,#2c6e00 50%);
+        background-size: 220%;
+        background-position: 100% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    aside .search{
+        margin-bottom:20px;
+        vertical-align: middle; 
+    }
+    section{
+        width: 90%;
+        grid-template-columns:repeat(1,1fr) ;
+    }
 }

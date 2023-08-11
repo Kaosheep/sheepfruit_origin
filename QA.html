@@ -42,6 +42,23 @@
             <li class="list"><a href="">登入</a></li>
         </ul>
     </nav>
+    <div class="monav">
+        <div class="momenu" id="momenu">
+            <div class="center">
+            <a href="index.html" ><img src="logo/logo.png" alt="logo" id="monavlogo"></a></div>
+            <li style="--i:0;" id="close"><i class="fa-solid fa-circle-xmark"></i></li>
+            <li style="--i:1;"><a href="new.html"><i class="fa-regular fa-newspaper"></i><p>最新消息</p></a></li>
+            <li style="--i:2;"><a href="about.html"><i class="fa-solid fa-map-location-dot"></i><p>園區導覽</p></a></li>
+            <li style="--i:3;"><a href="activity.html"><i class="fa-solid fa-cow"></i><p>牧場體驗</p></a></li>
+            <li style="--i:4;"><a href="shop.html"><i class="fa-solid fa-store"></i><p>小農產品</p></a></li>
+            <li style="--i:5;"><a href="QA.html"><i class="fa-regular fa-circle-question"></i><p>常見問題</p></a></li>
+        </div>
+        <div class="monavbar">
+            <i class="fa-solid fa-bars" id="opennav"></i>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>   
+        </div>
+    </div>
     <div class="path">
         <ul>
             <li><a href="#farm">牧場<img src="logo/icon.png"></a></li>
@@ -186,6 +203,7 @@
         </div>
         <p>本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
     </footer>
+    <script src="js/common.js" defer="defer"></script>
     <script>
     var ques = document.querySelectorAll(".ques");
     var ans = document.querySelectorAll(".ans");

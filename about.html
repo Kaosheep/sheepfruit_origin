@@ -42,6 +42,23 @@
             <li class="list"><a href="">登入</a></li>
         </ul>
     </nav>
+    <div class="monav">
+        <div class="momenu" id="momenu">
+            <div class="center">
+            <a href="index.html" ><img src="logo/logo.png" alt="logo" id="monavlogo"></a></div>
+            <li style="--i:0;" id="close"><i class="fa-solid fa-circle-xmark"></i></li>
+            <li style="--i:1;"><a href="new.html"><i class="fa-regular fa-newspaper"></i><p>最新消息</p></a></li>
+            <li style="--i:2;"><a href="about.html"><i class="fa-solid fa-map-location-dot"></i><p>園區導覽</p></a></li>
+            <li style="--i:3;"><a href="activity.html"><i class="fa-solid fa-cow"></i><p>牧場體驗</p></a></li>
+            <li style="--i:4;"><a href="shop.html"><i class="fa-solid fa-store"></i><p>小農產品</p></a></li>
+            <li style="--i:5;"><a href="QA.html"><i class="fa-regular fa-circle-question"></i><p>常見問題</p></a></li>
+        </div>
+        <div class="monavbar">
+            <i class="fa-solid fa-bars" id="opennav"></i>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>   
+        </div>
+    </div>
     <div class="pagebar">
         <img src="bar\aboutbar.jpg" alt="about">
         <h1 class="pagetitle">園區介紹</h1>
@@ -146,10 +163,10 @@
     <div class="cloudtitle" id="story"><h2>牧場的一天</h2></div>
     <div class="story col-10" id="story">
         <div class="time col-3">
-            <a href="#feed"><img src="story\feed.png" alt="">餵食時間</a>
-            <a href="#milk"><img src="story\milk.png" alt="">擠奶時間</a>
-            <a href="#clean"><img src="story\clean.png" alt="">打掃時間</a>
-            <a href="#home"><img src="story\sunset.png" alt="">回家時間</a>
+            <a href="#feed"><img src="story\feed.png" alt=""><p>餵食時間</p></a>
+            <a href="#milk"><img src="story\milk.png" alt=""><p>擠奶時間</p></a>
+            <a href="#clean"><img src="story\clean.png" alt=""><p>打掃時間</p></a>
+            <a href="#home"><img src="story\sunset.png" alt=""><p>回家時間</p></a>
         </div>
         <div class="window col-9">
             <div class="page" id="feed">
@@ -165,19 +182,15 @@
                 <div class="txt">
                 <img src="story\AdobeStock_235552362 1.jpg" alt="">
                 <p>
-                準備工作：確保山羊的健康，準備擠奶器材，並洗手和消毒乳房區域。<br>
-                安頓山羊：將山羊固定在擠奶區域，並清潔山羊的乳頭。<br>
-                擠取羊奶：使用擠奶機或手工擠奶器擠取羊奶，注意擠奶節奏和山羊乳頭的健康。<br>
+                準備工作：確保山羊的健康，準備擠奶器材，並洗手和消毒乳房區域。<br><br>
+                擠取羊奶：使用擠奶機或手工擠奶器擠取羊奶，注意擠奶節奏和山羊乳頭的健康。<br><br>
                 清潔與消毒：擠奶結束後，徹底清潔和消毒擠奶器材。</p></div></div>
             <div class="page" id="clean">
                 <h3>打掃時間</h3>
                 <div class="txt">
                 <img src="story\AdobeStock_235552362 1.jpg" alt="">
-                <p>準備工作：在開始清潔畜舍之前，確保準備好所需的工具和用品，例如清掃工具、清潔劑、手套和保護口罩等。<br>
-                    <br>
-                床上物更換：更換木屑、稻草或草堆。這有助於提供舒適和衛生的環境，同時還可以吸收動物排泄物的氣味和濕氣。<br>
-                <br>
-                消毒清潔：使用適當的清潔劑對畜舍進行消毒，以殺滅細菌、病毒和其他病原體。</p></div>
+                <p>準備工作：在開始清潔畜舍之前，確保準備好所需的工具和用品，例如清掃工具、清潔劑、手套和保護口罩等。<br><br>
+                床上物更換：更換木屑、稻草或草堆。<br>這有助於提供舒適和衛生的環境，同時還可以吸收動物排泄物的氣味和濕氣。</p></div>
                 </div>
             <div class="page" id="home">
                 <h3>回家時間</h3>
@@ -191,7 +204,7 @@
         </div>
     </div>
     <div class="cloudtitle" id="photo"><h2>活動寫真</h2></div>
-    <div class="photo col-10">
+    <div class="photo">
         <img src="animal\sheepf.png" alt="">
         <img src="activity\24699792_m.jpg" alt="">
         <img src="activity\25115618_s.jpg" alt="">
@@ -232,5 +245,9 @@
         </div>
         <p>本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
     </footer>
+    <script src="js/common.js" defer="defer"></script>
+    <script>
+
+    </script>
 </body>
 </html>

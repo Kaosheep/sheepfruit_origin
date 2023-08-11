@@ -42,6 +42,23 @@
             <li class="list"><a href="">登入</a></li>
         </ul>
     </nav>
+    <div class="monav">
+        <div class="momenu" id="momenu">
+            <div class="center">
+            <a href="index.html" ><img src="logo/logo.png" alt="logo" id="monavlogo"></a></div>
+            <li style="--i:0;" id="close"><i class="fa-solid fa-circle-xmark"></i></li>
+            <li style="--i:1;"><a href="new.html"><i class="fa-regular fa-newspaper"></i><p>最新消息</p></a></li>
+            <li style="--i:2;"><a href="about.html"><i class="fa-solid fa-map-location-dot"></i><p>園區導覽</p></a></li>
+            <li style="--i:3;"><a href="activity.html"><i class="fa-solid fa-cow"></i><p>牧場體驗</p></a></li>
+            <li style="--i:4;"><a href="shop.html"><i class="fa-solid fa-store"></i><p>小農產品</p></a></li>
+            <li style="--i:5;"><a href="QA.html"><i class="fa-regular fa-circle-question"></i><p>常見問題</p></a></li>
+        </div>
+        <div class="monavbar">
+            <i class="fa-solid fa-bars" id="opennav"></i>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>   
+        </div>
+    </div>
     <main>
         <div class="path">
             <ul>
@@ -56,15 +73,17 @@
         </div>
         <div class="pic">
             <div class="content">
-            <img src="activity\24542438_s.jpg" alt="">
-            <p></p></div>
-            <div class="content -center">
-            <img src="activity\26040835_m.jpg" alt=""><p></p></div>
-            <div class="content">
-            <img src="activity\26214408_s.jpg" alt=""><p></p></div>
+            <img src="activity\24542438_s.jpg" alt="" draggable="false">
+            <img src="activity\26040835_m.jpg" alt="" draggable="false">
+            <img src="activity\26214408_s.jpg" alt="" draggable="false">
+            <img src="activity\cook.jpg" alt="" draggable="false">
+            <img src="activity\25115618_s.jpg" alt="" draggable="false">
+            </div>
             <div class="btn">
-                <button><i class="fa-solid fa-arrow-left"></i></button>
-                <button><i class="fa-solid fa-arrow-right"></i></button>
+                <button id="left"><i class="fa-solid fa-arrow-left"></i></button>
+                <ul class="dot">
+                </ul>
+                <button id="right"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
         <div class="allact" id="allact">
@@ -267,5 +286,89 @@
         </div>
         <p>本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
     </footer>
+    <script src="js/common.js" defer="defer"></script>
+    <script>
+        let pic =document.querySelector('.pic');
+        let content = document.querySelector('.content');
+        let img = content.querySelectorAll('.pic img');
+        let imgwidth = content.querySelector('img').offsetWidth;
+        
+        //resize
+        function resizewindow(e){
+         if((Math.floor(pic.offsetWidth /imgwidth)) == 1){
+            content.style.width = imgwidth + 'px';
+        }else{
+         content.style.width = parseInt(Math.floor(pic.offsetWidth /imgwidth)*imgwidth + 20) +'px';   
+        }
+        }   
+        resizewindow();
+        window.addEventListener('resize',resizewindow);
+        //adddot
+        for (let i = 0; i < img.length; i++) {
+        document.querySelector('.dot').innerHTML += '<li></li>';
+        }
+        document.querySelector('.pic .btn li:first-child').classList.add('active');
+
+        let imgarray = [];
+        let dotlist = document.querySelector('.dot').children;
+        img.forEach(function(item){
+            imgarray.push(item);  
+        })
+        //move
+        let index = 0;
+        let timer = setInterval(move,4000);
+        function move(){
+            if(index<img.length-1){
+                index++
+            }else{
+                index=0;
+            }
+            content.scrollLeft = imgwidth *index;
+            dotlist[index].classList.add('active');
+            for(i=0;i<dotlist.length;i++){
+                if(dotlist[i] != dotlist[index]){
+                    dotlist[i].classList.remove('active');
+                }
+            }
+        }
+        console.log(typeof dotlist)
+        console.log(dotlist)
+        dotlist.addEventListener('click',()=>{
+            for(i=0;i<dotlist.length;i++){
+            clearInterval(timer);
+            }
+            return i;
+        });
+        console.log(i);
+        content.scrollLeft = (imgwidth + 10) *i;
+
+        // dotlist.forEach(function(btn){
+        //     btn.addEventListener('click',()=>{
+        //         clearInterval(timer);
+        //     })
+        //     index = imgarray.indexOf(btn);
+        //     content.scrollLeft = imgwidth *index;
+        //     this.classList.add('active');
+        //     dot.forEach(function(otherbtn){
+        //         if(otherbtn != btn){
+        //             otherbtn.classList.remove('active')
+        //         }
+        //     })
+        //     timer = setInterval(move,4000)
+
+        // })
+
+        //按鈕
+    let left = document.getElementById('left');
+    let right = document.getElementById('right');
+    
+    left.addEventListener('click',()=>{
+        content.scrollLeft -= (imgwidth + 10);
+    })
+    right.addEventListener('click',()=>{
+        content.scrollLeft += (imgwidth+ 10);
+    })
+
+    </script>
 </body>
 </html>
