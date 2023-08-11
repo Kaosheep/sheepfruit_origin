@@ -507,7 +507,194 @@ display: none;
 }
 }
 @media screen and (max-width:768px){
+    header{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
     .monav{
+        position: fixed;
+        top: -20px;
+        left: 0;
+        z-index: 20;
+    }
+    .monav.open{
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(187, 187, 187, 0.4);
+        -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .monav .monavbar{
+        position: absolute;
+        top: 65px;
+        left: 130px;
+        width: 150px;
+        background-color: #90B44B;
+        border-radius:0 50px 50px 0 ;
+        text-align: center;
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        transition: .2s;
+        -webkit-transform-origin: left;
+            -ms-transform-origin: left;
+                transform-origin: left;
+        -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+                transform: scaleX(1);
+        -webkit-box-shadow: 0px 5px 3px rgba(81, 96, 110,.3);
+                box-shadow: 0px 5px 3px rgba(81, 96, 110,.3);
+    }
+    .monav .monavbar i{
+        cursor: pointer;
+        width: 20%;
+        font-size: 1.2rem;
+        margin:0px 6px;
+        line-height: 50px;
+    }
+    .monavbar.small{
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+                transform: scaleX(0);
+    }
+    .momenu{
+        position: relative;
+        width: 180px;
+        height: 180px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .monav.open .momenu{
+        width: 350px;
+        height: 350px;
+    }
+    .momenu .center a img{
+        width: 100px;
+    }
+    .momenu .center{
+        position: absolute;
+        z-index: 20;
+        
+    }
+    .momenu li{
+        position: absolute;
+        -webkit-transform-origin: 175px;
+            -ms-transform-origin: 175px;
+                transform-origin: 175px;
+        left: 0;
+        -webkit-transition: .6s;
+        -o-transition: .6s;
+        transition: .6s;
+        -webkit-transition-delay:calc(.1s * var(--i)) ;
+             -o-transition-delay:calc(.1s * var(--i)) ;
+                transition-delay:calc(.1s * var(--i)) ;
+        -webkit-transform: rotate(0deg) translateX(170px);
+            -ms-transform: rotate(0deg) translateX(170px);
+                transform: rotate(0deg) translateX(170px);
+        opacity: 0;
+    }
+    #close{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: #fff;
+        width: 50px;
+        height: 50px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-radius: 50px;
+        -webkit-box-shadow: 0px 0px 5px rgba(81, 96, 110, .2);
+                box-shadow: 0px 0px 5px rgba(81, 96, 110, .2);
+        cursor: pointer;
+    }
+    #close i,.momenu li a i{
+        color: #2C6E00;
+        font-size: 1.5rem;
+        text-shadow: 0px 0px 3px #fff;
+    }
+    .momenu li a{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: #fff;
+        width: 50px;
+        height: 50px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-radius: 50px;
+        -webkit-box-shadow: 0px 0px 5px rgba(81, 96, 110, .2);
+                box-shadow: 0px 0px 5px rgba(81, 96, 110, .2);
+    }
+    .momenu.active li{
+        width: 50px;
+    }
+    .momenu li p{
+        -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+                transform: scaleX(0);
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-left: 5px;
+        text-wrap: nowrap;
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        transition: .2s;
+        -webkit-transform-origin: left;
+            -ms-transform-origin: left;
+                transform-origin: left;
+    }
+    .momenu.active p{
+        -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+                transform: scaleX(1);
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        transition: .2s;
+    }
+    
+    .monav{
+        display: block;
+    }
+    .momenu.active li{
+        -webkit-transform:rotate(calc(360deg/6 * var(--i)));
+            -ms-transform:rotate(calc(360deg/6 * var(--i)));
+                transform:rotate(calc(360deg/6 * var(--i))); 
+    }
+    .momenu.active li a{
+        -webkit-transform: rotate(calc(360deg / -6 * var(--i)));
+            -ms-transform: rotate(calc(360deg / -6 * var(--i)));
+                transform: rotate(calc(360deg / -6 * var(--i)));
+    }
+    /* .monav{
         position: fixed;
         top: -20px;
         left: 0;
@@ -618,12 +805,7 @@ display: none;
         transform: scaleX(1);
         transition: .2s;
     }
-    header{
-        display: none;
-    }
-    nav{
-        display: none;
-    }
+    
     .monav{
         display: block;
     }
@@ -632,7 +814,7 @@ display: none;
     }
     .momenu.active li a{
         transform: rotate(calc(360deg / -6 * var(--i)));
-    }
+    } */
     .cloudtitle{
         font-size: 1.2rem;
         height: 200px;
