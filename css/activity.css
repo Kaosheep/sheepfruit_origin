@@ -3,6 +3,8 @@
     margin: auto;
 }
 .pic .content{
+    max-width: 920px;
+    min-width: 300px;
     margin: auto;
     font-size: 0px;
     cursor: pointer;
@@ -51,17 +53,18 @@
   transition: .2s;  
 }
 .allact{
-    margin-top: 120px;
+    max-width: 1000px;
+    width: 90%;
+    margin: 120px auto 0;
 }
 .actblock{
     background-color: #ffffff;
-    width: 996px;
-    height: 500px;
+    width: 100%;
     border-radius: 10px;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 24px;
+    padding:0px 24px 20px;
     margin-top: 24px;
     flex-wrap: wrap;
 }
@@ -69,24 +72,27 @@
     text-align: center;
     display: block;
     width: 100%;
+    line-height: 3rem;
 }
-.card h4{
+.card{
+    width: 30%;
+}
+.card .txt h4{
     text-align: center;
     font-size: 20px;
     margin: 12px 0;
 }
-.card p{
-    margin-left: 40px;
-    line-height: 30px;
-    
+.card .txt p{
+    line-height: 1.8rem;
 }
 .actblock .card img{
-    width: 300px;
-    height: 250px;
+    width: 100%;
     border-radius: 10px;
     object-fit: cover;
+    aspect-ratio: 1/1;
 }
 .card p i{
+    width: 1rem;
     text-align: center;
     margin-right: 7px;
 }
@@ -108,10 +114,11 @@
 }
 .net .box{
     position: relative;
-    width: 240px;
-    height: 160px;
+    width: 90%;
+    /* height: 160px; */
     cursor: pointer;
     margin-left: 1rem;
+    aspect-ratio: 3/2;
 }
 .net .box .f{
     width: 100%;
@@ -193,7 +200,7 @@
     transform: rotateY(360deg) scale(1.5);  
 }
 .net>p{ 
-    width: 200px;
+    min-width: 150px;
     background:no-repeat center / contain url("../item/onion.png") ;
     text-align: center;
     padding: 40px  0;
@@ -238,7 +245,9 @@
     transform: translate(-20px,-30px) ;
 }
 .plan{
+    width: 70%;
     margin: auto;
+    transition: .2s;
 }
 .plan .row{
     margin: auto;
@@ -288,13 +297,91 @@
     line-height:2.5rem;
 }
 .plan .row .price .more{
-    position: static;
     margin:0px auto;
-    height:2rem;
     border-radius: 50px;
     border: 2px solid #2C6E00;
+    padding: 5px;
 }
 .plan .row .price .more a{
     height: 100%;
     width: 100%;
+}
+@media screen and (max-width:768px) {
+    .net{
+        display: none;
+    }
+    .allact{
+        margin-bottom: 100px;
+    }
+    .actblock{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        padding: 10px 0px;
+        white-space: nowrap;
+    }
+    .actblock .card img{
+        margin: auto;
+        display: inline-block;
+        min-height: 145px;
+        width: 35%;
+        aspect-ratio: auto;
+    }
+    .actblock .card .txt{
+        vertical-align: top;
+        display: inline-block;
+        width:64%;
+    }
+    .actblock .card h4{
+        text-align: center;
+        
+    }
+    .actblock .card p{
+        padding-left:8% ;
+    }
+    .plan{
+        width: 96%;
+    }
+    .plan .row .price .more{
+        width: 100%;
+    }
+    .plan .row{
+        padding: 0.5rem 0.4rem;
+    }
+}
+@media screen and (max-width:400px) {
+    .allact{width: 100%;}
+    .actblock{
+        padding:0px 1rem 1rem;
+    }
+    .plan .row{
+        height: auto;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        margin: 1rem 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    .plan .row img{
+        width: 100%;
+    }
+    .plan .row .txt{
+        width: 100%;
+        padding: 0;
+    }
+    .plan .row .txt h3{
+        padding: 0.5rem 0;
+        margin-bottom: 0;
+    }
+    .plan .row .price{
+        width: 100%;
+    }
+    .plan .row .price .more{
+        width: 75%;
+        font-size: 1.25rem;
+    }
+    .plan .row .price p{
+        line-height: 2rem;
+    }
 }

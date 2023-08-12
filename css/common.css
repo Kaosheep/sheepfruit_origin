@@ -515,7 +515,7 @@ display: none;
     }
     .monav{
         position: fixed;
-        top: -20px;
+        top: -10px;
         left: 0;
         z-index: 20;
     }
@@ -523,6 +523,7 @@ display: none;
         position: fixed;
         height: 100vh;
         width: 100vw;
+        top: 0;
         background-color: rgba(187, 187, 187, 0.4);
         -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
@@ -534,13 +535,14 @@ display: none;
                 justify-content: center;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center;
+                align-items: center; 
     }
     .monav .monavbar{
         position: absolute;
-        top: 65px;
-        left: 130px;
-        width: 150px;
+        top: 50px;
+        left: 123px;
+        width: 160px;
+        padding-left: 10px;
         background-color: #90B44B;
         border-radius:0 50px 50px 0 ;
         text-align: center;
@@ -573,8 +575,8 @@ display: none;
     }
     .momenu{
         position: relative;
-        width: 180px;
-        height: 180px;
+        width: 140px;
+        height: 140px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -590,6 +592,10 @@ display: none;
         height: 350px;
     }
     .momenu .center a img{
+        vertical-align: bottom;
+        width: 120px;
+    }
+    .monav.open .momenu img{
         width: 100px;
     }
     .momenu .center{
@@ -664,7 +670,7 @@ display: none;
         font-size: 1.1rem;
         font-weight: 700;
         margin-left: 5px;
-        text-wrap: nowrap;
+        white-space: nowrap;
         -webkit-transition: .2s;
         -o-transition: .2s;
         transition: .2s;
@@ -694,127 +700,6 @@ display: none;
             -ms-transform: rotate(calc(360deg / -6 * var(--i)));
                 transform: rotate(calc(360deg / -6 * var(--i)));
     }
-    /* .monav{
-        position: fixed;
-        top: -20px;
-        left: 0;
-        z-index: 20;
-    }
-    .monav.open{
-        position: fixed;
-        height: 100vh;
-        width: 100vw;
-        background-color: rgba(187, 187, 187, 0.4);
-        backdrop-filter: blur(5px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .monav .monavbar{
-        position: absolute;
-        top: 65px;
-        left: 130px;
-        width: 150px;
-        background-color: #90B44B;
-        border-radius:0 50px 50px 0 ;
-        text-align: center;
-        transition: .2s;
-        transform-origin: left;
-        transform: scaleX(1);
-        box-shadow: 0px 5px 3px rgba(81, 96, 110,.3);
-    }
-    .monav .monavbar i{
-        cursor: pointer;
-        width: 20%;
-        font-size: 1.2rem;
-        margin:0px 6px;
-        line-height: 50px;
-    }
-    .monavbar.small{
-        transition: .3s;
-        transform: scaleX(0);
-    }
-    .momenu{
-        position: relative;
-        width: 180px;
-        height: 180px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .monav.open .momenu{
-        width: 350px;
-        height: 350px;
-    }
-    .momenu .center a img{
-        width: 100px;
-    }
-    .momenu .center{
-        position: absolute;
-        z-index: 20;
-        
-    }
-    .momenu li{
-        position: absolute;
-        transform-origin: 175px;
-        left: 0;
-        transition: .6s;
-        transition-delay:calc(.1s * var(--i)) ;
-        transform: rotate(0deg) translateX(170px);
-        opacity: 0;
-    }
-    #close{
-        display: flex;
-        background-color: #fff;
-        width: 50px;
-        height: 50px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50px;
-        box-shadow: 0px 0px 5px rgba(81, 96, 110, .2);
-        cursor: pointer;
-    }
-    #close i,.momenu li a i{
-        color: #2C6E00;
-        font-size: 1.5rem;
-        text-shadow: 0px 0px 3px #fff;
-    }
-    .momenu li a{
-        display: flex;
-        background-color: #fff;
-        width: 50px;
-        height: 50px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50px;
-        box-shadow: 0px 0px 5px rgba(81, 96, 110, .2);
-    }
-    .momenu.active li{
-        width: 50px;
-    }
-    .momenu li p{
-        transform: scaleX(0);
-        font-size: 1.1rem;
-        font-weight: 700;
-        margin-left: 5px;
-        text-wrap: nowrap;
-        transition: .2s;
-        transform-origin: left;
-    }
-    .momenu.active p{
-        transform: scaleX(1);
-        transition: .2s;
-    }
-    
-    .monav{
-        display: block;
-    }
-    .momenu.active li{
-        transform:rotate(calc(360deg/6 * var(--i))); 
-    }
-    .momenu.active li a{
-        transform: rotate(calc(360deg / -6 * var(--i)));
-    } */
     .cloudtitle{
         font-size: 1.2rem;
         height: 200px;
@@ -865,35 +750,6 @@ display: none;
     footer>p{
         padding: 0px 10px;
     }
-    /* .monav.open .momenu{
-        width: 200px;
-        height: 200px;
-    }
-    .monav.open{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .momenu li a{
-        width: 130px;
-        transform: rotate(0);
-    }
-    .momenu.active li a{
-        transform: rotate(0);
-    }
-    .momenu.active li{
-        top:150px;
-        transform:translateY(calc(60px * var(--i))); 
-    }
-    .momenu li{
-        transform-origin: center;
-        left: 18%;
-        transform:translateX(0px)
-    }
-    .momenu.active li:nth-child(2){
-        transform:translateX(40px)
-    } */
     .monav.open .momenu{
         width: 200px;
         height: 200px;

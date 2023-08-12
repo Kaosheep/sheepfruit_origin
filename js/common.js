@@ -38,8 +38,6 @@ opennav.addEventListener("click", function(event) {
         });
     });
 
-console.log(momenu.classList)
-
 close.addEventListener("click",()=>{
     momenu.classList.remove('active');
     setTimeout(() => {

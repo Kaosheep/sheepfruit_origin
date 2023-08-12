@@ -78,6 +78,7 @@
             <img src="activity\26214408_s.jpg" alt="" draggable="false">
             <img src="activity\cook.jpg" alt="" draggable="false">
             <img src="activity\25115618_s.jpg" alt="" draggable="false">
+            <img src="activity\cheese.jpg" alt="" draggable="false">
             </div>
             <div class="btn">
                 <button id="left"><i class="fa-solid fa-arrow-left"></i></button>
@@ -92,48 +93,53 @@
                 <h3>動物互動</h3>
                 <div class="card">
                     <img src="activity\2377857_s.jpg" alt="feed">
+                    <div class="txt">
                     <h4>餵食羊羊</h4>
                     <p><i class="fa-solid fa-clock"></i>開放時間:08:00~17:00<br>
                         <i class="fa-solid fa-location-dot"></i>地點:羊羊廣場<br>
-                        <i class="fa-solid fa-dollar-sign"></i>價錢:牧草一束30元</p>
+                        <i class="fa-solid fa-dollar-sign"></i>價錢:牧草一束30元</p></div>
                 </div>
                 <div class="card">
                     <img src="activity\milking.jpg" alt="milking">
+                    <div class="txt">
                     <h4>擠羊奶</h4>
                     <p><i class="fa-solid fa-clock"></i>開放時間:10:00~14:00<br>
                         <i class="fa-solid fa-location-dot"></i>地點:山羊羊舍</p>
-                </div>
+                </div></div>
                 <div class="card">
-                    
                     <img src="activity\drink.jpg" alt="drink">
+                    <div class="txt">
                     <h4>羊奶試飲</h4>
                     <p><i class="fa-solid fa-clock"></i>開放時間:10:00~14:00<br>
                         <i class="fa-solid fa-location-dot"></i>地點:山羊羊舍</p>
-                </div>
+                </div></div>
             </div>
             <div class="actblock" id="actblock">
                 <h3>手作工坊</h3>
                 <div class="card">
                     <img src="activity\cheese.jpg" alt="">
+                    <div class="txt">
                     <h4>手工起司製作體驗</h4>
                     <p><i class="fa-solid fa-clock"></i>開放時間:14:00~16:00<br>
                         <i class="fa-solid fa-location-dot"></i>地點:起司研究室<br>
-                        <i class="fa-solid fa-dollar-sign"></i>材料費:150元</p>
-                </div>
+                       <i class="fa-solid fa-dollar-sign"></i>材料費:150元</p>
+                </div></div> 
                 <div class="card">
                     <img src="activity\131656_s.jpg" alt="">
+                    <div class="txt">
                     <h4>羊毛氈體驗</h4>
                     <p><i class="fa-solid fa-clock"></i>開放時間:09:00~15:00<br>
                         <i class="fa-solid fa-location-dot"></i>地點:手作教室<br>
                         <i class="fa-solid fa-dollar-sign"></i>材料費:90元</p>
-                </div>
+                </div></div>
                 <div class="card">
                     <img src="activity\4474049_s.jpg" alt="">
+                    <div class="txt">
                     <h4>料理教室</h4>
                     <p><i class="fa-solid fa-clock"></i>開放時間:09:00~15:00<br>
                         <i class="fa-solid fa-location-dot"></i>地點:手作廚房<br>
                         <i class="fa-solid fa-dollar-sign"></i>材料費:200元</p>
-                </div>
+                </div></div>
             </div>
         </div>
         <div class="bbq" id="bbq">
@@ -194,10 +200,10 @@
                         </div>
                     </div>
                 </label>
-                <p>所有組合均贈<br>氣泡飲料<br>水果盤<br>特調醬料</p>
+                <p>組合均贈<br>氣泡飲料<br>水果盤<br>特調醬料</p>
             </div>
         </div>
-        <div class="plan col-8">
+        <div class="plan">
             <div class="row">
                 <img src="activity\meats.jpg" alt="">
                 <div class="txt">
@@ -287,88 +293,6 @@
         <p>本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
     </footer>
     <script src="js/common.js" defer="defer"></script>
-    <script>
-        let pic =document.querySelector('.pic');
-        let content = document.querySelector('.content');
-        let img = content.querySelectorAll('.pic img');
-        let imgwidth = content.querySelector('img').offsetWidth;
-        
-        //resize
-        function resizewindow(e){
-         if((Math.floor(pic.offsetWidth /imgwidth)) == 1){
-            content.style.width = imgwidth + 'px';
-        }else{
-         content.style.width = parseInt(Math.floor(pic.offsetWidth /imgwidth)*imgwidth + 20) +'px';   
-        }
-        }   
-        resizewindow();
-        window.addEventListener('resize',resizewindow);
-        //adddot
-        for (let i = 0; i < img.length; i++) {
-        document.querySelector('.dot').innerHTML += '<li></li>';
-        }
-        document.querySelector('.pic .btn li:first-child').classList.add('active');
-
-        let imgarray = [];
-        let dotlist = document.querySelector('.dot').children;
-        img.forEach(function(item){
-            imgarray.push(item);  
-        })
-        //move
-        let index = 0;
-        let timer = setInterval(move,4000);
-        function move(){
-            if(index<img.length-1){
-                index++
-            }else{
-                index=0;
-            }
-            content.scrollLeft = imgwidth *index;
-            dotlist[index].classList.add('active');
-            for(i=0;i<dotlist.length;i++){
-                if(dotlist[i] != dotlist[index]){
-                    dotlist[i].classList.remove('active');
-                }
-            }
-        }
-        console.log(typeof dotlist)
-        console.log(dotlist)
-        dotlist.addEventListener('click',()=>{
-            for(i=0;i<dotlist.length;i++){
-            clearInterval(timer);
-            }
-            return i;
-        });
-        console.log(i);
-        content.scrollLeft = (imgwidth + 10) *i;
-
-        // dotlist.forEach(function(btn){
-        //     btn.addEventListener('click',()=>{
-        //         clearInterval(timer);
-        //     })
-        //     index = imgarray.indexOf(btn);
-        //     content.scrollLeft = imgwidth *index;
-        //     this.classList.add('active');
-        //     dot.forEach(function(otherbtn){
-        //         if(otherbtn != btn){
-        //             otherbtn.classList.remove('active')
-        //         }
-        //     })
-        //     timer = setInterval(move,4000)
-
-        // })
-
-        //按鈕
-    let left = document.getElementById('left');
-    let right = document.getElementById('right');
-    
-    left.addEventListener('click',()=>{
-        content.scrollLeft -= (imgwidth + 10);
-    })
-    right.addEventListener('click',()=>{
-        content.scrollLeft += (imgwidth+ 10);
-    })
-
-    </script>
+    <script src="js/actsilder.js" defer="defer"></script>
 </body>
 </html>
