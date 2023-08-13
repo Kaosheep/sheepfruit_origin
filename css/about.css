@@ -632,6 +632,9 @@ tr td:nth-child(2){
     .map .pin input{
         transform: rotate(-90deg) ;
     }
+    .map{
+        margin-bottom: 250px;
+    }
     .story{
         width: 100%;
     }

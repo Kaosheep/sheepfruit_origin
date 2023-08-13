@@ -12,31 +12,53 @@ window.addEventListener("resize", function () {
     win.scrollLeft = pagewidth*index;
 });
 btn[0].classList.add('click');
-btn.forEach(function(b){
-    b.addEventListener('touchstart',()=>{
-        index = btn.indexOf(b);
-        win.scrollLeft = pagewidth*index; 
-        btn.forEach((d)=>{
-            if(btn.indexOf(d) != btn.indexOf(b)){
-                d.classList.remove('click')
-            }else{
-                d.classList.add('click')
-            }
-    })
-    })
-    b.addEventListener('click',()=>{
-        index = btn.indexOf(b);
-        win.scrollLeft = pagewidth*index; 
-        btn.forEach((d)=>{
-            if(btn.indexOf(d) != btn.indexOf(b)){
-                d.classList.remove('click')
-            }else{
-                d.classList.add('click')
-            }
-    })
-    })
+
+// btn.forEach(function(b){
+//     b.addEventListener('touchend',(e)=>{
+//         index = btn.indexOf(b);
+//         win.scrollLeft = pagewidth*index; 
+//         btn.forEach((d)=>{
+//             if(btn.indexOf(d) != btn.indexOf(b)){
+//                 d.classList.remove('click')
+//             }else{
+//                 d.classList.add('click')
+//             }
+//     })
+//     })
+//     b.addEventListener('click',()=>{
+//         index = btn.indexOf(b);
+//         win.scrollLeft = pagewidth*index; 
+//         btn.forEach((d)=>{
+//             if(btn.indexOf(d) != btn.indexOf(b)){
+//                 d.classList.remove('click')
+//             }else{
+//                 d.classList.add('click')
+//             }
+//     })
+//     })
     
-})
+// })
+btn.forEach((b) => {
+    b.addEventListener('touchend', handleClick);
+    b.addEventListener('click', handleClick);
+});
+
+function handleClick() {
+    index = btn.indexOf(this);
+    win.scrollLeft = pagewidth * index;
+    setActiveButton(index);
+}
+
+function setActiveButton(activeIndex) {
+    btn.forEach((btn, i) => {
+        if (i === activeIndex) {
+            btn.classList.add('click');
+        } else {
+            btn.classList.remove('click');
+        }
+    });
+}
+
 
 //------------------------------------
 
