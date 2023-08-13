@@ -1,3 +1,10 @@
+window.addEventListener('scroll', ()=>{
+    if(document.documentElement.scrollTop>window.innerHeight){
+        monav.style.top = '-10px'
+    }else{
+        monav.style.top = '-100%'
+    }
+    });
 let wrap = document.querySelector('.wrap')
 let paralogo = document.getElementById('paralogo');
 let floor = document.getElementById('floor');

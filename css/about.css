@@ -560,13 +560,13 @@ tr td:nth-child(2){
     }
     .pin{
         margin: auto;
-        width: 75vh;
+        width: 70vh;
         height: 100vw;
         transform-origin:left bottom;
         transform: rotate(90deg) translateX(-75%);
     }
     .pin img{
-        width: 75vh;
+        width: 70vh;
         height: 100vw;
     }
     .map .pin input#cheese{

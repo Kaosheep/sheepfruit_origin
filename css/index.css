@@ -1,5 +1,6 @@
 .wrap{
     height:100vh;
+    height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -369,7 +370,7 @@
 .goshop .btnchangecolortxt{
     display: block;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-size: 1.25rem;
     line-height: 3.5rem;
 }
@@ -499,16 +500,14 @@
     border-radius: 0px;
 }
 .goshop{
-    max-width: 50%;
-    padding: 1.25rem;
-    width: 80%;
+    padding: 1rem;
+    max-width: 300px;
     margin: auto; 
     transform: translateY(-50%);
     border-radius: 50px;
 }
 .sheeprow{
     justify-content: center;
-    height: 50vh;
 }
 .sum{
     margin:100px auto;
@@ -530,7 +529,7 @@
     display:inline-block;
 }
 .item span{
-    height: 20vh;
+    height: 200px;
     border-radius:100px;
     aspect-ratio: auto;
 }
@@ -556,7 +555,7 @@
 }
 .act .card{
     width: 80%;
-    height: 25vh;
+    height: 200px;
     position: relative;
     margin:0 auto 1rem;
     text-align: center;
@@ -569,12 +568,12 @@
     transform: translateX(5%);
     bottom: 0px;
     text-align: end;
-    line-height: 25vh;
+    line-height: 200px;
     padding: 0 13%;
     background-image:url("../back/cloud.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 50% 107%;
+    background-size: 48% 107%;
     font-size: 1.25rem;
 }
 }
@@ -601,5 +600,18 @@
 .bar::after{
     width: 100px;
     height: 100px;
+}
+.card h3{
+    padding-top: 5%;
+    background-position: bottom 0px right -15px;
+    background-size: 60% 80%;
+    font-size: 1.25rem;
+}
+.goshop{
+    max-width: 250px;
+}
+.goshop .btnchangecolortxt{
+    letter-spacing: 1px;
+    line-height: 2rem;
 }
 }

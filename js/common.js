@@ -1,3 +1,6 @@
+let vh = window.innerHeight * 0.01;
+
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 // -----------行動nav
 let monav = document.querySelector('.monav');
 let opennav = document.getElementById('opennav');
@@ -11,15 +14,7 @@ let momenu = document.getElementById('momenu');
 let liElements = document.querySelectorAll('.momenu li');
 
 let liaElements = document.querySelectorAll('.momenu li a');
-
-window.addEventListener('scroll', ()=>{
-    if(document.documentElement.scrollTop>window.innerHeight){
-        monav.style.top = '-10px'
-    }else{
-        monav.style.top = '-100%'
-    }
-});
-
+ 
 opennav.addEventListener("click", function(event) {
 
     event.stopPropagation();
