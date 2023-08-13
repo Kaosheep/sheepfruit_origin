@@ -1,48 +1,40 @@
-let pic =document.querySelector('.pic');
-        let content = document.querySelector('.content');
-        let img = content.querySelectorAll('.pic img');
-        let imgwidth = content.querySelector('img').offsetWidth;
-        let index = 0;
-        let timer = setInterval(move,4000);
+let pic = document.querySelector('.pic');
+let content = document.querySelector('.content');
+let img = content.querySelectorAll('.pic img');
+let imgwidth = content.querySelector('img').offsetWidth;
+let index = 0;
+let timer = setInterval(move, 4000);
 
+createdot();
+let dotlist = document.querySelector('.dot').children;
+let dotarr = [...dotlist];
 
-        createdot();
-        let dotlist = document.querySelector('.dot').children;
-        let dotarr = [...dotlist];
-
-        function contentwidth(){
-         if((Math.floor(pic.offsetWidth /imgwidth)) == 1){
+function contentwidth() {
+    if ((Math.floor(pic.offsetWidth / imgwidth)) == 1) {
         content.style.width = imgwidth + 'px';
-        }else{
-         content.style.width = parseInt(Math.floor(pic.offsetWidth /imgwidth)*imgwidth + 20) +'px';   
-        }   
-        }
-        contentwidth();
-        //resize
-        function resizewindow(e){
-        contentwidth()
-        let dotcount = img.length / parseInt(Math.floor(pic.offsetWidth /imgwidth));
-        let dotlist = document.querySelector('.dot').children;
-        let dotarr = [...dotlist];
-        // dotarr[parseInt(((content.scrollLeft)/imgwidth) / Math.floor(pic.offsetWidth /imgwidth))].classList.add('active');
-        document.querySelector('.dot').innerHTML = '';
-        createdot()
-        // if(dotcount<=img.length){
+    } else {
+        content.style.width = parseInt(Math.floor(pic.offsetWidth / imgwidth) * imgwidth + 20) + 'px';
+    }
+}
 
-        //     for (let i = 1; i <dotcount; i++) {
-        //     document.querySelector('.dot').innerHTML += '<li></li>';
-        //     }
-        //     dotarr[parseInt(((content.scrollLeft)/imgwidth) / Math.floor(pic.offsetWidth /imgwidth))].classList.add('active');
+contentwidth();
 
-        // }else{
-        //     dotcount=img.length;
-        //     dotarr[parseInt((content.scrollLeft)/imgwidth)].classList.add('active');
-        // }
-        }
 
-        // resizewindow();
-        window.addEventListener('resize',resizewindow);
-        
+function resizewindow(e) {
+    contentwidth();
+
+    let dotcount = img.length / parseInt(Math.floor(pic.offsetWidth / imgwidth));
+    let currentPhotoIndex = 2;
+
+    document.querySelector('.dot').innerHTML = '';
+    for (let i = 0; i < dotcount; i++) {
+        document.querySelector('.dot').innerHTML += '<li></li>';
+    }
+    dotlist[currentPhotoIndex].classList.add('active');
+}
+
+resizewindow();
+window.addEventListener('resize', resizewindow);
 
         //adddot
         function createdot(){
@@ -116,21 +108,22 @@ let pic =document.querySelector('.pic');
                 }
             }
         }
-        // move();
-        dotarr.forEach(
-            function(d){
-            d.addEventListener('click',(e)=>{    
+
+dotarr.forEach(
+    function(d) {
+        d.addEventListener('click', (e) => {
             clearInterval(timer);
             index = dotarr.indexOf(d);
-            content.scrollLeft = imgwidth *index;
+            content.scrollLeft = imgwidth * index;
 
-            dotarr.forEach((b)=>{
-                if(dotarr.indexOf(b) != dotarr.indexOf(d)){
-                    b.classList.remove('active')
-                }else{
-                    b.classList.add('active')
+            dotarr.forEach((b) => {
+                if (dotarr.indexOf(b) != dotarr.indexOf(d)) {
+                    b.classList.remove('active');
+                } else {
+                    b.classList.add('active');
                 }
-            })
-            timer = setInterval(move,4000);
-            })
-        })
+            });
+            timer = setInterval(move, 4000);
+        });
+    }
+);
