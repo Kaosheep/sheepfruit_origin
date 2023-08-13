@@ -357,7 +357,7 @@ transform: scale(1);
 /* 綠色按鈕 */
 .btnchangecolor{
     text-align: center;
-    background:linear-gradient(45deg,rgb(44, 110, 0) 50%,#ffffff 50%);
+    background:linear-gradient(45deg,#ffffff 50%,#ffffff 50%);
     background-size: 220%;
     background-position: 100% 100%;
     transition: .4s;
@@ -365,7 +365,7 @@ transform: scale(1);
 }
 .btnchangecolortxt{
     color:transparent;
-    background:linear-gradient(45deg,#ffffff 50%,#2c6e00 50%);
+    background:linear-gradient(45deg,#2c6e00 50%,#2c6e00 50%);
     background-size: 220%;
     background-position: 100% 100%;
     background-clip: text;
@@ -494,7 +494,23 @@ form select{
 display: none;
 }
 @media screen and (hover:hover){
-    
+.btnchangecolor{
+    text-align: center;
+    background:linear-gradient(45deg,rgb(44, 110, 0) 50%,#ffffff 50%);
+    background-size: 220%;
+    background-position: 100% 100%;
+    transition: .4s;
+    cursor: pointer;
+}
+.btnchangecolortxt{
+    color:transparent;
+    background:linear-gradient(45deg,#ffffff 50%,#2c6e00 50%);
+    background-size: 220%;
+    background-position: 100% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: .4s;
+}
 .btnchangecolor:hover{
     background-position: 0% 0%;
 }
@@ -526,7 +542,6 @@ display: none;
     .monav.open{
         position: fixed;
         height: 100vh;
-        height: calc(var(--vh, 1vh) * 100);
         width: 100vw;
         top: 0;
         background-color: rgba(187, 187, 187, 0.4);

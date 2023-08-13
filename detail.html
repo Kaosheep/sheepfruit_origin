@@ -97,9 +97,11 @@
                 </ul>
                 <div class="numbtn">
                     <p>數量</p>
-                    <i class="fa-solid fa-minus"></i>
+                    <button id="minus">
+                    <i class="fa-solid fa-minus"></i></button>
                     <input type="number" value="1" id="num">
-                    <i class="fa-solid fa-plus"></i>
+                    <button id="plus">
+                    <i class="fa-solid fa-plus"></i></button>
                 </div>
                 <div class="btnchangecolor">
                     <a class="btnchangecolortxt" href=""><i class="fa-solid fa-cart-shopping"></i>加入購物車</a>
@@ -182,10 +184,10 @@
     }
     window.addEventListener("load", init, false);
     let num = document.getElementById('num')
-    document.querySelector('.fa-plus').addEventListener('click',()=>{
+    document.getElementById('plus').addEventListener('click',()=>{
        num.value = parseInt(num.value) + 1; 
     }) 
-    document.querySelector('.fa-minus').addEventListener('click',()=>{
+    document.getElementById('minus').addEventListener('click',()=>{
         if(num.value >1){
           num.value = parseInt(num.value) - 1;  
         }
