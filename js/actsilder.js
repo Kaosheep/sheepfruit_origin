@@ -21,23 +21,36 @@ let pic =document.querySelector('.pic');
         //resize
         function resizewindow(e){
         contentwidth()
-        let dotcount = img.length / parseInt(Math.floor(pic.offsetWidth /imgwidth));
+        let dotcount = img.length / parseInt(Math.floor(pic.offsetWidth /imgwidth)); 
+        document.querySelector('.dot').innerHTML = '';
+        if(dotcount<=img.length){
+
+            for (let i = 0; i <dotcount; i++) {
+            document.querySelector('.dot').innerHTML += '<li></li>';
+            }
+        }else{
+            dotcount=img.length;
+        }
         let dotlist = document.querySelector('.dot').children;
         let dotarr = [...dotlist];
-        // dotarr[parseInt(((content.scrollLeft)/imgwidth) / Math.floor(pic.offsetWidth /imgwidth))].classList.add('active');
-        document.querySelector('.dot').innerHTML = '';
-        createdot()
-        // if(dotcount<=img.length){
+        dotarr[parseInt(((content.scrollLeft)/imgwidth) / Math.floor(pic.offsetWidth /imgwidth))].classList.add('active');
+        dotarr.forEach(
+            function(d){
+            d.addEventListener('click',(e)=>{    
+            clearInterval(timer);
+            index = dotarr.indexOf(d);
+            content.scrollLeft = (imgwidth + 10) * Math.floor(pic.offsetWidth /imgwidth) *index;
 
-        //     for (let i = 1; i <dotcount; i++) {
-        //     document.querySelector('.dot').innerHTML += '<li></li>';
-        //     }
-        //     dotarr[parseInt(((content.scrollLeft)/imgwidth) / Math.floor(pic.offsetWidth /imgwidth))].classList.add('active');
-
-        // }else{
-        //     dotcount=img.length;
-        //     dotarr[parseInt((content.scrollLeft)/imgwidth)].classList.add('active');
-        // }
+            dotarr.forEach((b)=>{
+                if(dotarr.indexOf(b) != dotarr.indexOf(d)){
+                    b.classList.remove('active')
+                }else{
+                    b.classList.add('active')
+                }
+            })
+            timer = setInterval(move,4000);
+            })
+        })
         }
 
         // resizewindow();
@@ -46,11 +59,12 @@ let pic =document.querySelector('.pic');
 
         //adddot
         function createdot(){
-        
         let dotcount = img.length / parseInt(Math.floor(pic.offsetWidth /imgwidth));
         for (let i = 0; i <dotcount; i++) {
         document.querySelector('.dot').innerHTML += '<li></li>';
-        }   
+        }
+        let dotlist = document.querySelector('.dot').children;
+        let dotarr = [...dotlist];
         }
         document.querySelector('.pic .dot li:first-child').classList.add('active');
 
@@ -98,9 +112,9 @@ let pic =document.querySelector('.pic');
             isScrolling = false;
         }, 500);}
         })
+        
+        
         //move
-        
-        
         function move(){
             if(index<dotlist.length-1){
                 index++
@@ -116,13 +130,13 @@ let pic =document.querySelector('.pic');
                 }
             }
         }
-        // move();
+        move();
         dotarr.forEach(
             function(d){
             d.addEventListener('click',(e)=>{    
             clearInterval(timer);
             index = dotarr.indexOf(d);
-            content.scrollLeft = imgwidth *index;
+            content.scrollLeft = (imgwidth + 10) * Math.floor(pic.offsetWidth /imgwidth) *index;
 
             dotarr.forEach((b)=>{
                 if(dotarr.indexOf(b) != dotarr.indexOf(d)){
