@@ -211,6 +211,20 @@
         <img src="animal\26620745_s.jpg" alt="">
         <img src="activity\24294758_s.jpg" alt="">
     </div>
+    <div class="photobox" id="photobox">
+        <i class="fa-solid fa-circle-xmark" id="X"></i>
+        <div class="centerphoto">
+            <img src="animal\sheepf.png" alt="" class="large">
+        </div>
+        <div class="wrap">
+            <img src="animal\sheepf.png" alt="" class="small">
+            <img src="activity\24699792_m.jpg" alt="" class="small">
+            <img src="activity\25115618_s.jpg" alt="" class="small">
+            <img src="activity\24772511_s.jpg" alt="" class="small">
+            <img src="animal\26620745_s.jpg" alt="" class="small">
+            <img src="activity\24294758_s.jpg" alt="" class="small">
+        </div>
+    </div>
     </main>
     <div class="server">
         <input type="checkbox" id="bot">
@@ -245,35 +259,6 @@
         <p>本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
     </footer>
     <script src="js/common.js" defer="defer"></script>
-    <script>
-        let btn = [...document.querySelectorAll('.time button')];
-        let page = document.querySelectorAll('.page')
-        let pagewidth = nowwidth();
-        let win = document.querySelector('.window');
-        let index = 0;
-
-        function nowwidth(){
-            return document.querySelector('.window').offsetWidth;
-        }
-        window.addEventListener("resize", function () {
-            pagewidth = nowwidth();
-            win.scrollLeft = pagewidth*index;
-        });
-        btn[0].classList.add('click');
-        btn.forEach(function(b){
-            b.addEventListener('click',()=>{
-                index = btn.indexOf(b);
-                win.scrollLeft = pagewidth*index; 
-            btn.forEach((d)=>{
-                if(btn.indexOf(d) != btn.indexOf(b)){
-                    d.classList.remove('click')
-                }else{
-                    d.classList.add('click')
-                }
-            })
-            })
-            
-        })
-    </script>
+    <script src="js/about.js" defer="defer"></script>
 </body>
 </html>

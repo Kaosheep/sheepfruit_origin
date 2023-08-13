@@ -348,6 +348,7 @@ tr td:nth-child(2){
     gap: 10px;
 }
 .photo img{
+    cursor: pointer;
     width: 100%;
     height: 100%;
     object-fit:cover ;
@@ -361,9 +362,57 @@ tr td:nth-child(2){
     grid-column:3/5 ;
     grid-row:2/4 ;
 }
+.photobox{
+    display: none;
+    background-color: rgba(241, 241, 241, 0.8);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 25;
+    padding: 5%;
+}
+.photobox .centerphoto{
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photobox .centerphoto img{
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 26;
+}
+.photobox .wrap{
+    margin: auto;
+    height: 18%;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.photobox i{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2rem;
+    color: #2C6E00;
+    cursor: pointer;
+}
+.photobox .wrap .small{
+    display: inline-block;
+    width: 15%;
+    border-radius: 10px;
+    cursor: pointer;
+}
 .map .btngroup::-webkit-scrollbar {
     width: 7px;
-
   }
 .map .btngroup::-webkit-scrollbar {
     width: 10px;
@@ -378,8 +427,8 @@ tr td:nth-child(2){
 .map .btngroup::-webkit-scrollbar-thumb {
     background: #90B44B;
     border-radius: 4px;
-  }
-  
+}
+
 @media screen and (max-width:768px){
     .price table{
         width: 90%;
@@ -491,6 +540,8 @@ tr td:nth-child(2){
         min-height: 300px;
         object-position: left
     }
+    .photo{
+        width: 90%;}
 }
 @media screen and (max-width:450px){
     .time button img{

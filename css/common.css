@@ -338,6 +338,10 @@ transform: scale(1);
     transition: .2s;
     cursor: pointer;
 }
+.btn button i{
+    width: 24px;
+    line-height: 24px;
+}
 .product{
     position: relative;
 }
@@ -427,13 +431,12 @@ transform: scale(1);
     cursor: grab;
     user-select: none;
 }
-.shop .btn{
-    display: inline-block;
-}
-.shop{
+.productwrap .btn{
+    display: block;
+    margin: auto;
     text-align: center;
 }
-.shop .btn button{
+.productwrap .btn button{
     margin:0px 50px ;
 }
 .object{
@@ -515,9 +518,10 @@ display: none;
     }
     .monav{
         position: fixed;
-        top: -10px;
+        top: -100%;
         left: 0;
         z-index: 20;
+        transition: .5s;
     }
     .monav.open{
         position: fixed;

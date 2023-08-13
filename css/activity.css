@@ -100,149 +100,7 @@
     margin-right:auto;
 }
 .net{
-    margin: auto;
-    width: 100%;
-    height: 206px;
-    border: 2px solid #686868 ;
-    border-radius:10px ;
-    opacity: .8;
-    background-image:  linear-gradient(#686868 3px, transparent 3px), linear-gradient(to right, #686868 3px, #ffffff 3px);
-    background-size: 50px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.net .box{
-    position: relative;
-    width: 90%;
-    /* height: 160px; */
-    cursor: pointer;
-    margin-left: 1rem;
-    aspect-ratio: 3/2;
-}
-.net .box .f{
-    width: 100%;
-    height: 100%;
-    border-radius:77% 23% 76% 24% / 30% 30% 70% 70% ;
-    background-size: cover;
-    perspective: 400px;
-    transition: .3s;
-    box-shadow: inset 10px 8px 1px rgba(255, 139, 139, 0.5);
-}
-.net label:first-child .f{background-image: url("../back/steak.jpg");}
-.net label:nth-child(2) .f{background-image: url("../back/steak2.jpg");}
-.net label:nth-child(3) .f{
-    background-image: url("../back/steak3.png");
-    background-size: fill;
-    box-shadow: inset 10px 8px 1px rgba(255, 139, 139, .9);
-}
-.net .box .f img{
-    width:60%;
-    transform:translate(30%,40%);
-}
-.net .box  i{
-    top: 65%;
-    left: 50%;
-    position: absolute;
-    z-index: 3;
-    color: #fff;
-    font-size: 30px;
-    animation:hint .5s 0s linear infinite alternate;
-}
-@keyframes hint{
-    0%{transform: translateY(0px);}
-    100%{transform: translateY(6px);}
-}
-.net .box .b{
-    width: 100%;
-    height: 100%;
-    border-radius: 30% 70% 23% 76% / 30% 24% 70% 77% ;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    transition: .5s;
-    overflow: hidden;
-    text-align: center;
-}
-.net .box .b img{
-    width: 100%;
-    object-fit: cover;
-    opacity: .6;
-}
-.net .box .txt{
-    padding: 10px 15px;
-    width: 75%;
-    height: 75%;
-    position: absolute;
-    top: 15%;
-    left:15%;
-    z-index: 1;
-    border-radius: 30% 70% 23% 76% / 30% 24% 70% 77% ; 
-    background-color: rgba(255, 255, 255,.8);
-}
-.net .box .b h3{
-    font-size: 13px;
-    margin-bottom: 6px;
-}
-.net .box .b p{
-    font-size: 11px;
-    line-height: 16px;
-}
-.net input[type="checkbox"]{
     display: none;
-}
-.net input[type="checkbox"]:checked~.box .f{
-    transform: rotateY(180deg);
-}
-.net  input[type="checkbox"]:checked~.box .b{
-    transform: rotateY(360deg) scale(1.5);  
-}
-.net>p{ 
-    min-width: 150px;
-    background:no-repeat center / contain url("../item/onion.png") ;
-    text-align: center;
-    padding: 40px  0;
-    line-height: 25px;
-    transition: .3s;
-}
-.net>p:hover{
-    transform: scale(1.1)
-}
-.box .f::after{
-    content:"";
-    background-image: url("../activity/yuge.png");
-    background-size: contain;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    right: -15%;
-    z-index: 3;
-    opacity: 0;
-    transition: .8s;
-}
-.box .f::before{
-    content:"";
-    background:no-repeat center/ contain url("../activity/yuge2.png");
-    background-size: contain;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    bottom: -10%;
-    left:-10%;
-    z-index: 3;
-    opacity: 0;
-    transition: .8s ;
-}
-.box .f:hover::after{
-    opacity: .8;
-    transform: translateY(-20px);
-}
-.box .f:hover::before{
-    opacity: .8;
-    transform: translate(-20px,-30px) ;
 }
 .plan{
     width: 70%;
@@ -306,6 +164,153 @@
     height: 100%;
     width: 100%;
 }
+@media screen and (hover:hover){
+    .net{
+        margin: auto;
+        width: 100%;
+        height: 206px;
+        border: 2px solid #686868 ;
+        border-radius:10px ;
+        opacity: .8;
+        background-image:  linear-gradient(#686868 3px, transparent 3px), linear-gradient(to right, #686868 3px, #ffffff 3px);
+        background-size: 50px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .net .box{
+        position: relative;
+        width: 90%;
+        /* height: 160px; */
+        cursor: pointer;
+        margin-left: 1rem;
+        aspect-ratio: 3/2;
+    }
+    .net .box .f{
+        width: 100%;
+        height: 100%;
+        border-radius:77% 23% 76% 24% / 30% 30% 70% 70% ;
+        background-size: cover;
+        perspective: 400px;
+        transition: .3s;
+        box-shadow: inset 10px 8px 1px rgba(255, 139, 139, 0.5);
+    }
+    .net label:first-child .f{background-image: url("../back/steak.jpg");}
+    .net label:nth-child(2) .f{background-image: url("../back/steak2.jpg");}
+    .net label:nth-child(3) .f{
+        background-image: url("../back/steak3.png");
+        background-size: fill;
+        box-shadow: inset 10px 8px 1px rgba(255, 139, 139, .9);
+    }
+    .net .box .f img{
+        width:60%;
+        transform:translate(30%,40%);
+    }
+    .net .box  i{
+        top: 65%;
+        left: 50%;
+        position: absolute;
+        z-index: 3;
+        color: #fff;
+        font-size: 30px;
+        animation:hint .5s 0s linear infinite alternate;
+    }
+    @keyframes hint{
+        0%{transform: translateY(0px);}
+        100%{transform: translateY(6px);}
+    }
+    .net .box .b{
+        width: 100%;
+        height: 100%;
+        border-radius: 30% 70% 23% 76% / 30% 24% 70% 77% ;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        transition: .5s;
+        overflow: hidden;
+        text-align: center;
+    }
+    .net .box .b img{
+        width: 100%;
+        object-fit: cover;
+        opacity: .6;
+    }
+    .net .box .txt{
+        padding: 10px 15px;
+        width: 75%;
+        height: 75%;
+        position: absolute;
+        top: 15%;
+        left:15%;
+        z-index: 1;
+        border-radius: 30% 70% 23% 76% / 30% 24% 70% 77% ; 
+        background-color: rgba(255, 255, 255,.8);
+    }
+    .net .box .b h3{
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    .net .box .b p{
+        font-size: 11px;
+        line-height: 16px;
+    }
+    .net input[type="checkbox"]{
+        display: none;
+    }
+    .net input[type="checkbox"]:checked~.box .f{
+        transform: rotateY(180deg);
+    }
+    .net  input[type="checkbox"]:checked~.box .b{
+        transform: rotateY(360deg) scale(1.5);  
+    }
+    .net>p{ 
+        min-width: 150px;
+        background:no-repeat center / contain url("../item/onion.png") ;
+        text-align: center;
+        padding: 40px  0;
+        line-height: 25px;
+        transition: .3s;
+    }
+    .net>p:hover{
+        transform: scale(1.1)
+    }
+    .box .f::after{
+        content:"";
+        background-image: url("../activity/yuge.png");
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        right: -15%;
+        z-index: 3;
+        opacity: 0;
+        transition: .8s;
+    }
+    .box .f::before{
+        content:"";
+        background:no-repeat center/ contain url("../activity/yuge2.png");
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: -10%;
+        left:-10%;
+        z-index: 3;
+        opacity: 0;
+        transition: .8s ;
+    }
+    .box .f:hover::after{
+        opacity: .8;
+        transform: translateY(-20px);
+    }
+    .box .f:hover::before{
+        opacity: .8;
+        transform: translate(-20px,-30px) ;
+    }
+}
 @media screen and (max-width:768px) {
     .net{
         display: none;
@@ -351,6 +356,9 @@
     }
 }
 @media screen and (max-width:400px) {
+    .pic{
+        width: 100%;
+    }
     .allact{width: 100%;}
     .actblock{
         padding:0px 1rem 1rem;

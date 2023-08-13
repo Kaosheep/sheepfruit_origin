@@ -30,6 +30,7 @@
     min-height: 220px;
     object-position: right bottom;
     z-index: 3;
+    transition: .2s;
 }
 #paralogo{
     width: 55%;
@@ -47,12 +48,14 @@
     z-index: 2;
     background-size: contain;
     margin-left: auto;
+    transition: .2s;
 }
 #cl{
     position: absolute;
     top: -10%;
     left: 0;
     width: 40%;
+    transition: .2s;
 }
 .wrap::-webkit-scrollbar{
     display: none;
@@ -98,8 +101,8 @@
     border-radius: 100px;
     padding: 55px;
     position: absolute;
-    bottom: 15px;
-    left: 15px;
+    bottom: 5%;
+    left: 5%;
     box-shadow: 0px 5px 5px rgba(81, 96, 110,.5);
 }
 .wrap .shop i{
@@ -220,6 +223,9 @@
     transition: .3s;
     transform: scale(1);
 }
+.item p s{
+    display: none;
+}
 .item span{
     display: block;
     border: 5px solid white;
@@ -253,23 +259,25 @@
    text-align: center;
 }
 .sheeprow{ 
-    max-width: 1280px;
-    height: 100%;
+    max-width: 900px;
     margin: auto;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc(100%/3);
-    position: relative;
-    overflow: hidden;
+}
+.sheeprow .view{
+    margin: auto;
+    display: flex;
     padding: 50px 0px 0px;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
-.sheeprow .newcol{
-    padding:0 30px; 
+.sheeprow .view .newcol{
+    flex-shrink: 0;
+    width: 300px;
+    padding:0 20px; 
 }
-.sheeprow .newcol a{
+.sheeprow .view .newcol a{
     width: 100%;
 }
-.sheeprow .newcol h3{
+.sheeprow .view .newcol h3{
     color:#2C6E00;
     text-align: center;
     display: block;
@@ -280,27 +288,18 @@
     margin: auto;
     text-shadow: 0px 5px 5px #bcbcbc;
 }
-.sheeprow .newcol a img{
+.sheeprow .view .newcol a img{
     width: 100%;
 }
-.sheeprow .newcol:nth-child(2){
-    transform: translateY(-50px);
+.no-trans{
+    scroll-behavior:auto;
 }
 .ground .btngroup{
-    text-align: center;
-    display: inline-block;
+    padding: 0.5rem 0;
 }
-.ground .btngroup .btn *{
-    margin: 0 3px;
-    cursor: pointer;
+.ground .btngroup .btn button{
+    margin:10px 50px;
 }
-.ground .btngroup .btn>i{
-    color: #fff;
-    text-shadow:0 5px 3px rgba(84, 84, 84, 0.6);
-    line-height: 24px;
-    transition: .2s;
-}
-
 .ground .btngroup .btnchangecolor{
     margin: 10px auto;
 }
@@ -317,7 +316,7 @@
     text-align: center;
 }
 .act .card{
-    width: 100%;
+    width: 28%;
     position: relative;
     margin: 0 1.25rem;
     text-align: center;
@@ -368,7 +367,6 @@
     height: auto;
 }
 .goshop .btnchangecolortxt{
-    
     display: block;
     text-align: center;
     letter-spacing: 5px;
@@ -440,8 +438,25 @@
     color: #FFF4E2;
 }
 }
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
+.sheeprow .newcol:nth-child(2){
+    transform: translateY(0px);
+}
+#cl{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 40%;
+}
+#moun{
+    min-height: 30vh;
+    object-fit: cover;
+}
+#floor{
+    object-position: bottom 0px right -50px;
+}
 .topmenu{
+    white-space: nowrap;
     text-align: center;
 }
 .wrap{
@@ -493,9 +508,8 @@
 }
 .sheeprow{
     justify-content: center;
-    height: 70vh;
+    height: 50vh;
 }
-
 .sum{
     margin:100px auto;
     flex-direction: column;
@@ -511,6 +525,9 @@
 }
 .item:hover p{
     transform:translate(-50%, -50%) scale(1.1); 
+}
+.item p s{
+    display:inline-block;
 }
 .item span{
     height: 20vh;
@@ -530,11 +547,57 @@
     vertical-align: middle;
     width: auto;
     height: auto;
+    white-space: nowrap;
 }
 
+.act{
+    flex-direction: column;
+    text-align: center;
+}
+.act .card{
+    width: 80%;
+    height: 25vh;
+    position: relative;
+    margin:0 auto 1rem;
+    text-align: center;
+    border-radius: 150px 150px ;
+}
+.card h3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(5%);
+    bottom: 0px;
+    text-align: end;
+    line-height: 25vh;
+    padding: 0 13%;
+    background-image:url("../back/cloud.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50% 107%;
+    font-size: 1.25rem;
+}
 }
 @media screen and (max-width:400px){
-
+.item p s{
+    display:none;
+} 
+#moun{
+    min-height: 30vh;
+    object-fit: cover;
+}
+#paralogo{
+    width: 70%;
+}
+#floor{
+    object-position: bottom 0px right -100px;
+}
+.wrap .shop{
+    display: none;
+}
+.wrap .topmenu{
+    padding: 15px 10px;
+}
 .bar::after{
     width: 100px;
     height: 100px;

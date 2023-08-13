@@ -1,4 +1,3 @@
-
 // -----------行動nav
 let monav = document.querySelector('.monav');
 let opennav = document.getElementById('opennav');
@@ -7,15 +6,24 @@ let monavlogo = document.getElementById('monavlogo');
 let center=document.querySelector('.center')
 
 
-let close = document.getElementById('close');
+let closen = document.getElementById('close');
 let momenu = document.getElementById('momenu');
 let liElements = document.querySelectorAll('.momenu li');
 
 let liaElements = document.querySelectorAll('.momenu li a');
 
+window.addEventListener('scroll', ()=>{
+    if(document.documentElement.scrollTop>window.innerHeight){
+        monav.style.top = '-10px'
+    }else{
+        monav.style.top = '-100%'
+    }
+});
+
 opennav.addEventListener("click", function(event) {
 
     event.stopPropagation();
+    
     monavbar.classList.add('small');
     setTimeout(() => {
     liElements.forEach(liElement => {
@@ -36,9 +44,9 @@ opennav.addEventListener("click", function(event) {
         liElements.forEach(liElement => {
             liElement.style.opacity = '0';
         });
-    });
+});
 
-close.addEventListener("click",()=>{
+closen.addEventListener("click",()=>{
     momenu.classList.remove('active');
     setTimeout(() => {
         monav.classList.remove('open');
@@ -48,4 +56,3 @@ close.addEventListener("click",()=>{
         liElement.style.opacity = '0';
     });     
 })
-

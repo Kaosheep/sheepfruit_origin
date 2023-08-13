@@ -155,14 +155,18 @@ section ul{
 }
 section .libar{width: 100%;}
 .env{
+    width: 90%;
+}
+.env .content{
     width: 80%;
+    padding:15% 0px 10px;
 }
 .inputstyle input{
     height:1.7rem;
 }
 .inputstyle label{
     font-size: 0.8rem;
-    line-height:1.4rem;
+    line-height:1.35rem;
 }
 }
 @media screen and (max-width:400px){

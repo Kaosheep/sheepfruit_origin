@@ -8,8 +8,11 @@ const objectwidth = products.querySelector(".object").offsetWidth;
 let productschildrens = [...products.children];
 
 let preview = Math.round(products.offsetWidth/objectwidth);
+resizew()
+function resizew(){
+    products.style.width = (parseInt(Math.floor(document.querySelector('.productwrap').offsetWidth/objectwidth) * objectwidth))+'px';}
 
-window.addEventListener("resize", (event) => {products.style.width = (parseInt(Math.floor(document.querySelector('.productwrap').offsetWidth/objectwidth) * objectwidth))+'px';});
+window.addEventListener("resize", resizew);
 
 
 productschildrens.slice(-preview).reverse().forEach(product=>{
