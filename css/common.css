@@ -526,6 +526,7 @@ display: none;
     .monav.open{
         position: fixed;
         height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
         width: 100vw;
         top: 0;
         background-color: rgba(187, 187, 187, 0.4);

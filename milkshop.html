@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>羊桃觀光牧場|產品|純乳</title>
-    <link rel="icon" href="logo\icon.png">
+    <link rel="icon" href="logo/icon.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/milkshop.css">
@@ -86,8 +86,8 @@
             </div>
         </aside>
         <div class="searchbox" tabindex="0">
-            <i class="fa-solid fa-circle-xmark"></i>
-            <input type="search" placeholder="搜尋...">
+            <i class="fa-solid fa-circle-xmark" id="searchclose"></i>
+            <input type="text" placeholder="搜尋...">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
             <p>熱門搜尋:<a href="detail.html">羊奶</a><a href="detail.html">香草冰淇淋</a><a href="detail.html">冰淇淋馬卡龍</a></p>
         </div>
@@ -208,7 +208,7 @@
     <script>
         let searchbutton = document.getElementById('searchbutton');
         let searchbox = document.querySelector('.searchbox');
-        let xmark = document.querySelector('.fa-circle-xmark');
+        let searchclose = document.getElementById('searchclose');
         let searchbutton2 = document.getElementById('searchbutton2');
         function open(){
             searchbox.style.transform = 'translateX(-100%)'
@@ -220,7 +220,7 @@
         searchbutton.addEventListener("click",open)
         searchbutton2.addEventListener("click",open)
         
-        xmark.addEventListener("click",close);
+        searchclose.addEventListener("click",close);
 
         window.addEventListener("click", function (event) {
             if (!searchbox.contains(event.target) && event.target != searchbutton && event.target != searchbutton2) {

@@ -145,7 +145,8 @@ section .item:hover img{
         left: 100%;
         font-size: 0;
         background-color: rgba(187, 187, 187, 0.3);
-        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
         width: 300px;
         height: 200px;
         text-align: center;
@@ -162,13 +163,15 @@ section .item:hover img{
         left: 4%;
     }
     .searchbox input{
+        -webkit-appearance: none;
         width: 145px;
         border:1px solid rgb(44, 110, 0);
         border-right:none ;
         font-size: 1rem;
         vertical-align:bottom;
         height: 2rem;
-        border-radius: 100px 0px 0px 100px;
+        border-radius: 100px 0 0 100px;
+        -webkit-border-radius: 100px 0 0 100px;
         padding: 5px 10px;
         color: rgb(44, 110, 0);
     }

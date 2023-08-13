@@ -529,7 +529,7 @@
     display:inline-block;
 }
 .item span{
-    height: 200px;
+    height: 180px;
     border-radius:100px;
     aspect-ratio: auto;
 }
@@ -555,7 +555,7 @@
 }
 .act .card{
     width: 80%;
-    height: 200px;
+    height: 180px;
     position: relative;
     margin:0 auto 1rem;
     text-align: center;
@@ -601,11 +601,13 @@
     width: 100px;
     height: 100px;
 }
+
 .card h3{
     padding-top: 5%;
     background-position: bottom 0px right -15px;
     background-size: 60% 80%;
     font-size: 1.25rem;
+
 }
 .goshop{
     max-width: 250px;
@@ -614,4 +616,5 @@
     letter-spacing: 1px;
     line-height: 2rem;
 }
+
 }

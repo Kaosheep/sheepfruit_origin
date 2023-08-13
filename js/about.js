@@ -41,12 +41,8 @@ for(let i=0;i<ophoto.length;i++){
 })
 }
 
-photobox.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (photobox.style.display == 'block') {
-        photobox.addEventListener('click',closeModal);
-    }
-});
+photobox.onclick = closeModal;
+
 large.addEventListener('click',(e)=>{
     e.stopPropagation();
 })
