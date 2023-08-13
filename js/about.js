@@ -29,24 +29,6 @@ btn.forEach((btn, i) => {
         setActiveButton(index);
     });
 });
-
-
-// btn.forEach(function(b){
-//     b.addEventListener('click',()=>{
-//         index = btn.indexOf(b);
-//         win.scrollLeft = pagewidth*index; 
-//         btn.forEach((d)=>{
-//             if(btn.indexOf(d) != btn.indexOf(b)){
-//                 d.classList.remove('click')
-//             }else{
-//                 d.classList.add('click')
-//             }
-//     })
-//     })
-    
-// })
-
-
 //------------------------------------
 
 let ophoto = document.querySelectorAll('.photo img')

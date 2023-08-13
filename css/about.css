@@ -641,6 +641,9 @@ tr td:nth-child(2){
     .story .time{
         flex-wrap: wrap;
     }
+    .history{
+        margin: 0 auto 50px auto;
+    }
     .history .block .txt p{
         text-align:justify;
     }
@@ -659,6 +662,12 @@ tr td:nth-child(2){
     }
     .history .block:first-child{
         height: 70vh;
+    }
+    .history .block .mid{
+        width: 70%;
+    }
+    .history .block .but{
+        width: 70%;
     }
     .time{
         width: 100%;
@@ -683,5 +692,15 @@ tr td:nth-child(2){
         width: 80%;
         height: 60%;
     }
-    
+    .history .block:nth-child(2) .txt{
+        width: 65%;
+        bottom: 50px;
+        left: 0;
+    }
+    .history .block:nth-child(3) .txt{
+        width: 65%;
+        top: -90px;
+        right: 0;
+        bottom: auto;
+    }
 }
