@@ -94,9 +94,7 @@ section .item .icon path{
     stroke-dasharray: 440;
     stroke-dashoffset: 0;
 }
-section .item .icon:hover path{
-    animation:heart 1s .1s linear forwards;
-}
+
 section .item .icon.active path{
     fill : #FFAEAE;
     animation: none;
@@ -130,11 +128,17 @@ max-width: 170px;
 object-fit: contain;
 transition: .2s;
 }
-section .item:hover img{
-    transform: scale(1.1);
-}
+
 .searchbox{
     display: none;
+}
+@media screen and (hover:hover) {
+    section .item .icon:hover path{
+        animation:heart 1s .1s linear forwards;
+    }
+    section .item:hover img{
+    transform: scale(1.1);
+}  
 }
 @media screen and (max-width:768px){
     main{
