@@ -13,31 +13,38 @@ window.addEventListener("resize", function () {
 });
 btn[0].classList.add('click');
 
-btn.forEach(function(b){
-    b.addEventListener('touchend',(e)=>{
-        index = btn.indexOf(b);
-        win.scrollLeft = pagewidth*index; 
-        btn.forEach((d)=>{
-            if(btn.indexOf(d) != btn.indexOf(b)){
-                d.classList.remove('click')
-            }else{
-                d.classList.add('click')
-            }
-    })
-    })
-    b.addEventListener('click',()=>{
-        index = btn.indexOf(b);
-        win.scrollLeft = pagewidth*index; 
-        btn.forEach((d)=>{
-            if(btn.indexOf(d) != btn.indexOf(b)){
-                d.classList.remove('click')
-            }else{
-                d.classList.add('click')
-            }
-    })
-    })
+function setActiveButton(activeIndex) {
+    btn.forEach((btn, i) => {
+        if (i === activeIndex) {
+            btn.classList.add('click');
+        } else {
+            btn.classList.remove('click');
+        }
+    });
+}
+btn.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+        index = i;
+        win.scrollLeft = nowwidth() * index;
+        setActiveButton(index);
+    });
+});
+
+
+// btn.forEach(function(b){
+//     b.addEventListener('click',()=>{
+//         index = btn.indexOf(b);
+//         win.scrollLeft = pagewidth*index; 
+//         btn.forEach((d)=>{
+//             if(btn.indexOf(d) != btn.indexOf(b)){
+//                 d.classList.remove('click')
+//             }else{
+//                 d.classList.add('click')
+//             }
+//     })
+//     })
     
-})
+// })
 
 
 //------------------------------------
