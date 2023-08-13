@@ -364,7 +364,7 @@ transform: scale(1);
     cursor: pointer;
 }
 .btnchangecolortxt{
-    color:transparent;
+    color:#2c6e00;
     background:linear-gradient(45deg,#2c6e00 50%,#2c6e00 50%);
     background-size: 220%;
     background-position: 100% 100%;

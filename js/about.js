@@ -1,31 +1,68 @@
-let btn = [...document.querySelectorAll('.time button')];
-let page = document.querySelectorAll('.page')
-let pagewidth = nowwidth();
+// let btn = [...document.querySelectorAll('.time button')];
+// let page = document.querySelectorAll('.page')
+// let pagewidth = nowwidth();
+// let win = document.querySelector('.window');
+// let index = 0;
+
+// function nowwidth(){
+//     return document.querySelector('.window').offsetWidth;
+// }
+// window.addEventListener("resize", function () {
+//     pagewidth = nowwidth();
+//     win.scrollLeft = pagewidth*index;
+// });
+// btn[0].classList.add('click');
+// btn.forEach(function(b){
+//     b.addEventListener('click',()=>{
+//         index = btn.indexOf(b);
+//         win.scrollLeft = pagewidth*index; 
+//     btn.forEach((d)=>{
+//         if(btn.indexOf(d) != btn.indexOf(b)){
+//             d.classList.remove('click')
+//         }else{
+//             d.classList.add('click')
+//         }
+//     })
+//     })
+    
+// })
+let btns = document.querySelectorAll('.time button');
 let win = document.querySelector('.window');
 let index = 0;
 
-function nowwidth(){
+function nowwidth() {
     return document.querySelector('.window').offsetWidth;
 }
-window.addEventListener("resize", function () {
-    pagewidth = nowwidth();
-    win.scrollLeft = pagewidth*index;
-});
-btn[0].classList.add('click');
-btn.forEach(function(b){
-    b.addEventListener('click',()=>{
-        index = btn.indexOf(b);
-        win.scrollLeft = pagewidth*index; 
-    btn.forEach((d)=>{
-        if(btn.indexOf(d) != btn.indexOf(b)){
-            d.classList.remove('click')
-        }else{
-            d.classList.add('click')
+
+function setActiveButton(activeIndex) {
+    btns.forEach((btn, i) => {
+        if (i === activeIndex) {
+            btn.classList.add('click');
+        } else {
+            btn.classList.remove('click');
         }
-    })
-    })
-    
-})
+    });
+}
+
+btns.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+        index = i;
+        win.scrollLeft = nowwidth() * index;
+        setActiveButton(index);
+    });
+});
+
+win.addEventListener('scroll', () => {
+    const scrolledIndex = Math.round(win.scrollLeft / nowwidth());
+    if (scrolledIndex !== index) {
+        index = scrolledIndex;
+        setActiveButton(index);
+    }
+});
+
+window.addEventListener('resize', () => {
+    win.scrollLeft = nowwidth() * index;
+});
 
 //------------------------------------
 

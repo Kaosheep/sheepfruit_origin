@@ -75,9 +75,47 @@ section{
     gap: 24px;
 }
 section .item{
+    position: relative;
     width: 100%;
     background-image: linear-gradient(0deg,transparent 33%,#FFF4E2 33%,#FFF4E2 66%,transparent 66%);
     text-align: center;
+}
+section .item .icon{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+}
+section .item .icon path{
+    fill : #FFF;
+    stroke-width: 10;
+    stroke: #FFAEAE;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 0;
+}
+section .item .icon:hover path{
+    animation:heart 1s .1s linear forwards;
+}
+section .item .icon.active path{
+    fill : #FFAEAE;
+    animation: none;
+}
+@keyframes heart {
+    0%{
+        stroke-dashoffset: 0; 
+    }
+    40%{
+        stroke-dashoffset: 440;
+    }
+    80%{
+        stroke-dashoffset: 880;
+        fill: #fff;
+    }
+    100%{
+        stroke-dashoffset: 880;
+        fill: #FFAEAE;
+    }
 }
 section .item h2{
     font-size: 16px;
