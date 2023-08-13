@@ -13,6 +13,17 @@ window.addEventListener("resize", function () {
 });
 btn[0].classList.add('click');
 btn.forEach(function(b){
+    b.addEventListener('touchstart',()=>{
+        index = btn.indexOf(b);
+        win.scrollLeft = pagewidth*index; 
+        btn.forEach((d)=>{
+            if(btn.indexOf(d) != btn.indexOf(b)){
+                d.classList.remove('click')
+            }else{
+                d.classList.add('click')
+            }
+    })
+    })
     b.addEventListener('click',()=>{
         index = btn.indexOf(b);
         win.scrollLeft = pagewidth*index; 
