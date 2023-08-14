@@ -8,7 +8,7 @@ const objectwidth = products.querySelector(".object").offsetWidth;
 let productschildrens = [...products.children];
 
 let preview = Math.round(products.offsetWidth/objectwidth);
-resizew()
+resizew();
 function resizew(){
     products.style.width = (parseInt(Math.floor(document.querySelector('.productwrap').offsetWidth/objectwidth) * objectwidth))+'px';}
 
