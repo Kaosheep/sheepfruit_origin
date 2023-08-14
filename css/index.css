@@ -620,5 +620,7 @@
     letter-spacing: 1px;
     line-height: 2rem;
 }
-
+.sheeprow .view{
+    width: 300px;
+}
 }

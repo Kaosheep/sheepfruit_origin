@@ -787,6 +787,9 @@ display: none;
     }
 }
 @media screen and (max-width:400px){
+    .product{
+        width: 220px; ;
+    }
     .pagetitle{
         height: 100px;
         line-height: 100px;
