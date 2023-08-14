@@ -61,10 +61,12 @@
     </div>
     <div class="path">
         <ul>
-            <li><a href="#farm">牧場<img src="logo/icon.png"></a></li>
-            <li><a href="#act">活動<img src="logo/icon.png"></a></li>
-            <li><a href="#letter">客服<img src="logo/icon.png"></a></li>
+            <li><a href="#farm">牧場<img src="logo/icon.png" id="one"></a></li>
+            <li><a href="#act">活動<img src="logo/icon.png" id="two"></a></li>
+            <li><a href="#letter">客服<img src="logo/icon.png" id="three"></a></li>
         </ul>
+        <img id="icona" src="logo/icona.png" alt="">
+        <img id="icon" src="logo/icon.png" alt="">
     </div>
     <div class="pagebar">
         <img src="bar\qabar.jpg" alt="qa">
@@ -171,14 +173,23 @@
             </div>
         </div>
     </section>
-    <div class="server">
-        <input type="checkbox" id="bot">
-        <label for="bot">客服羊羊</label>
+    <div class="server">  
+        <div class="bot" id="bot">
+            <img src="logo/serviceopen.svg">
+            <img src="logo/service.svg">
+            <p>客服羊羊</p>
+        </div>
         <div class="talk">
+            <i class="fa-regular fa-rectangle-xmark" id="botclose"></i>
             <div class="header">客服羊羊</div>
             <div class="info">
+                <div class="auto">
+                <p>請問您需要什麼服務咩?</p>
+                <span class="chattime" id="opentime"></span>
             </div>
-            <input type="text">
+            </div>
+            <input type="text" id="textbox">
+            <i class="fa-solid fa-paper-plane" id="send"></i>
         </div>
     </div>
     <footer>
@@ -206,6 +217,31 @@
     <script src="js/common.js" defer="defer"></script>
     <script src="js/nav.js" defer="defer"></script>
     <script>
+    const icona = document.getElementById('icona');
+    const icon = document.getElementById('icon')
+    let farmy = document.getElementById('farm');
+    let acty = document.getElementById('act');
+    let lettery = document.getElementById('letter');
+
+    window.addEventListener('scroll', function() {
+    if((farmy.getBoundingClientRect().top - window.innerHeight)<=-100){
+        one.src = icona.src
+    }else{
+        one.src = icon.src
+    }
+    if((acty.getBoundingClientRect().top - window.innerHeight)<=-100){
+        two.src = icona.src
+    }else{
+        two.src = icon.src
+    }
+    if((lettery.getBoundingClientRect().top - window.innerHeight)<=-100){
+        three.src = icona.src
+    }else{
+        three.src = icon.src
+    }
+
+});
+
     var ques = document.querySelectorAll(".ques");
     var ans = document.querySelectorAll(".ans");
     var plus= document.querySelectorAll(".fa-circle-plus");

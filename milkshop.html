@@ -220,16 +220,25 @@
             <button id="right"><i class="fa-solid fa-arrow-right" ></i></button>
         </div>
         </div>
-    <div class="server">
-        <input type="checkbox" id="bot">
-        <label for="bot">客服羊羊</label>
-        <div class="talk">
-            <div class="header">客服羊羊</div>
-            <div class="info">
+        <div class="server">  
+            <div class="bot" id="bot">
+                <img src="logo/serviceopen.svg">
+                <img src="logo/service.svg">
+                <p>客服羊羊</p>
             </div>
-            <input type="text">
+            <div class="talk">
+                <i class="fa-regular fa-rectangle-xmark" id="botclose"></i>
+                <div class="header">客服羊羊</div>
+                <div class="info">
+                    <div class="auto">
+                    <p>請問您需要什麼服務咩?</p>
+                    <span class="chattime" id="opentime"></span>
+                </div>
+                </div>
+                <input type="text" id="textbox">
+                <i class="fa-solid fa-paper-plane" id="send"></i>
+            </div>
         </div>
-    </div>
     <footer>
         <div class="footer">
             <img class="star" src="back/starhalf.png">

@@ -108,14 +108,23 @@
             <li><a href=""><p class="date">2022.02.03</p><span class="tag event">活動消息</span><h3>牧場小農市集，集結當地農民和手工藝者，提供各種新鮮農產品和手工商品。</h3><spa class="view">79</span></a></li>
         </ul>
     </main>
-    <div class="server">
-        <input type="checkbox" id="bot">
-        <label for="bot">客服羊羊</label>
+    <div class="server">  
+        <div class="bot" id="bot">
+            <img src="logo/serviceopen.svg">
+            <img src="logo/service.svg">
+            <p>客服羊羊</p>
+        </div>
         <div class="talk">
+            <i class="fa-regular fa-rectangle-xmark" id="botclose"></i>
             <div class="header">客服羊羊</div>
             <div class="info">
+                <div class="auto">
+                <p>請問您需要什麼服務咩?</p>
+                <span class="chattime" id="opentime"></span>
             </div>
-            <input type="text">
+            </div>
+            <input type="text" id="textbox">
+            <i class="fa-solid fa-paper-plane" id="send"></i>
         </div>
     </div>
     <footer>

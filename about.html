@@ -65,11 +65,13 @@
     </div>
     <div class="path">
         <ul>
-            <li><a href="#price">門票<img src="logo/icon.png"></a></li>
-            <li><a href="#map">導覽<img src="logo/icon.png"></a></li>
-            <li><a href="#history">沿革<img src="logo/icon.png"></a></li>
-            <li><a href="#story">介紹<img src="logo/icon.png"></a></li>
-            <li><a href="#photo">寫真<img src="logo/icon.png"></a></li>
+            <li><a href="#price">門票<img src="logo/icon.png" id="one"></a></li>
+            <li><a href="#map">導覽<img src="logo/icon.png" id="two"></a></li>
+            <li><a href="#history">沿革<img src="logo/icon.png" id="three"></a></li>
+            <li><a href="#story">介紹<img src="logo/icon.png" id="four"></a></li>
+            <li><a href="#photo">寫真<img src="logo/icon.png" id="five"></a></li>
+            <img id="icona" src="logo/icona.png" alt="">
+            <img id="icon" src="logo/icon.png" alt="">
         </ul>
     </div>
     <main>
@@ -227,14 +229,23 @@
         </div>
     </div>
     </main>
-    <div class="server">
-        <input type="checkbox" id="bot">
-        <label for="bot">客服羊羊</label>
+    <div class="server">  
+        <div class="bot" id="bot">
+            <img src="logo/serviceopen.svg">
+            <img src="logo/service.svg">
+            <p>客服羊羊</p>
+        </div>
         <div class="talk">
+            <i class="fa-regular fa-rectangle-xmark" id="botclose"></i>
             <div class="header">客服羊羊</div>
             <div class="info">
+                <div class="auto">
+                <p>請問您需要什麼服務咩?</p>
+                <span class="chattime" id="opentime"></span>
             </div>
-            <input type="text">
+            </div>
+            <input type="text" id="textbox">
+            <i class="fa-solid fa-paper-plane" id="send"></i>
         </div>
     </div>
     <footer>
@@ -262,5 +273,43 @@
     <script src="js/common.js" defer="defer"></script>
     <script src="js/about.js" defer="defer"></script>
     <script src="js/nav.js" defer="defer"></script>
+    <script>
+        const icona = document.getElementById('icona');
+const icon = document.getElementById('icon')
+let pricey = document.getElementById('price');
+let mapy = document.getElementById('map');
+let historyy = document.getElementById('history');
+let storyy = document.getElementById('story');
+let photoy = document.getElementById('photo');
+
+window.addEventListener('scroll', function() {
+    if((pricey.getBoundingClientRect().top - window.innerHeight)<=-100){
+        one.src = icona.src
+    }else{
+        one.src = icon.src
+    }
+    if((mapy.getBoundingClientRect().top - window.innerHeight)<=-100){
+        two.src = icona.src
+    }else{
+        two.src = icon.src
+    }
+    if((historyy.getBoundingClientRect().top - window.innerHeight)<=-100){
+        three.src = icona.src
+    }else{
+        three.src = icon.src
+    }
+    if((storyy.getBoundingClientRect().top - window.innerHeight)<=-100){
+        four.src = icona.src
+    }else{
+        four.src = icon.src
+    }
+    if((photoy.getBoundingClientRect().top - window.innerHeight)<=-100){
+        five.src = icona.src
+    }else{
+        five.src = icon.src
+    }
+});
+
+    </script>
 </body>
 </html>

@@ -93,11 +93,13 @@
     </div>
     <div class="path">
         <ul>
-            <li><a href="#new">消息<img src="logo/icon.png"></a></li>
-            <li><a href="#activity">體驗<img src="logo/icon.png"></a></li>
-            <li><a href="#shop">產品<img src="logo/icon.png"></a></li>
-            <li><a href="#contact">資訊<img src="logo/icon.png"></a></li>
+            <li><a href="#new">消息<img src="logo/icon.png" id="one"></a></li>
+            <li><a href="#activity">體驗<img src="logo/icon.png" id="two"></a></li>
+            <li><a href="#shop">產品<img src="logo/icon.png" id="three"></a></li>
+            <li><a href="#contact">資訊<img src="logo/icon.png" id="four"></a></li> 
         </ul>
+        <img id="icona" src="logo/icona.png" alt="">
+        <img id="icon" src="logo/icon.png" alt="">
     </div>
     <main>
         <div class="sum">
@@ -175,8 +177,8 @@
                 <a class="btnchangecolortxt" href="activity.html">更多活動<i class="btnchangecolortxt fa-solid fa-angles-right"></i></a>
             </div>
         </div>
-        <div class="cloudtitle"><h2>熱銷產品</h2></div>
-        <div class="shop" id="shop">
+        <div class="cloudtitle" id="shop"><h2>熱銷產品</h2></div>
+        <div class="shop" >
             <div class="sum">
                 <div class="item">
                     <a href=""><p>純乳<s>系列</s></p>
@@ -230,14 +232,23 @@
             </div>
         </div>
     </main>
-    <div class="server">
-        <input type="checkbox" id="bot">
-        <label for="bot">客服羊羊</label>
+    <div class="server">  
+        <div class="bot" id="bot">
+            <img src="logo/serviceopen.svg">
+            <img src="logo/service.svg">
+            <p>客服羊羊</p>
+        </div>
         <div class="talk">
+            <i class="fa-regular fa-rectangle-xmark" id="botclose"></i>
             <div class="header">客服羊羊</div>
-            <div class="info"></div>
-            <input type="text">
-            <i class="fa-solid fa-paper-plane"></i>
+            <div class="info">
+                <div class="auto">
+                <p>請問您需要什麼服務咩?</p>
+                <span class="chattime" id="opentime"></span>
+            </div>
+            </div>
+            <input type="text" id="textbox">
+            <i class="fa-solid fa-paper-plane" id="send"></i>
         </div>
     </div>
     <footer>

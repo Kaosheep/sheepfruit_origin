@@ -1,3 +1,34 @@
+const icona = document.getElementById('icona');
+const icon = document.getElementById('icon')
+let newy = document.getElementById('new');
+let activityy = document.getElementById('activity');
+let shopy = document.getElementById('shop');
+let contacty = document.getElementById('contact');
+
+window.addEventListener('scroll', function() {
+    if((newy.getBoundingClientRect().top - window.innerHeight)<=-100){
+        one.src = icona.src
+    }else{
+        one.src = icon.src
+    }
+    if((activityy.getBoundingClientRect().top - window.innerHeight)<=-100){
+        two.src = icona.src
+    }else{
+        two.src = icon.src
+    }
+    if((shopy.getBoundingClientRect().top - window.innerHeight)<=-100){
+        three.src = icona.src
+    }else{
+        three.src = icon.src
+    }
+    if((contacty.getBoundingClientRect().top - window.innerHeight)<=-100){
+        four.src = icona.src
+    }else{
+        four.src = icon.src
+    }
+});
+
+
 window.addEventListener('scroll', ()=>{
     if(document.documentElement.scrollTop>window.innerHeight){
         monav.style.top = '0px'

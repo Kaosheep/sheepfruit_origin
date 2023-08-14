@@ -219,7 +219,7 @@ footer h3{
     top: 0;
     bottom: 0;
     position: fixed;
-    right: 5px;
+    right: 15px;
     z-index: 7;
 }
 .path ul{
@@ -239,9 +239,8 @@ footer h3{
     line-height: 32px;
 }
 .path a img{
+    pointer-events: none;
     width:40px ;
-    top: 0;
-    bottom: 0;
     margin: auto;
     vertical-align: top;
 }
@@ -257,44 +256,48 @@ footer h3{
     right: 20px;
     z-index: -1;
 }
+.path #icona{
+    display: none;
+}
+.path #icon{
+    display: none;
+}
 /* 客服 */
 .server{
     position: fixed;
+    width: 105px;
+    height: 91px;
     right: 0;
-    bottom: 20px;
-    z-index: 10;
-    
-}
-.server label{
-    display: block;
-    width: 100px;
-    height:100px;
-    background: no-repeat center/100% url("../logo/service.svg")
-    ;
-    cursor: pointer;
+    bottom: 0;
+    z-index: 25;
     text-align: center;
-    padding-top:85px ;
-    font-size: 10px;
-    color: #2d7000;
-
+}
+.bot img{
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.bot p{
+    color: #2C6E00;
 }
 .server .talk{
     position: absolute;
     height: 350px;
     width: 300px;
-    right: 50px;
-    bottom: 85px;
+    right: 25px;
+    bottom: 93px;
     border: 1px solid  #2d7000;
     background-color: #FFFFFF;
     border-radius:20px 20px 0px 20px;
     overflow: hidden;
-    text-align: center;
     z-index:-1;
     transform: scale(0);
     transition: .5s;
     transform-origin:bottom right;
 }
 .server .talk .header{
+    text-align: center;
     height: 40px;
     background-color:#2d7000 ;
     line-height: 40px;
@@ -302,10 +305,11 @@ footer h3{
 }
 .server .talk .info{
     height: 275px;
+    padding:5px 15px;
+    overflow-x: scroll;
 }
 .server .talk input{
     font-size: 1.25rem;
-    margin-top: auto; 
     height: 34px;
     width: 95%;
     border: none;
@@ -316,25 +320,51 @@ footer h3{
 .server .talk input:focus{
     outline: none;
 }
-.server .talk i{
+.server .talk .fa-paper-plane{
     color: #2C6E00;
     position: absolute;
     right: 10px;
     bottom: 5px;
     font-size: 1.5rem;
 }
-.server input[type="checkbox"]{
-    display: none;
+.server .talk .info .chattime{
+    margin: 3px;
+    color: #333;
+    vertical-align: bottom;
+    font-size: 10px;
 }
-#bot:checked~.talk{
+.server .talk .info .auto{
+    margin-top: 10px;
+    text-align: start;
+}
+.server .talk .info .auto p{
+    display: inline-block;
+    background-color: #2C6E00;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-radius:10px 10px 10px 0px ;
+    padding:5px 10px;
+}
+.server .talk .info .cust{
+    text-align: end;
+    margin-top:10px;
+}
+.server .talk .info .cust p{
+    display: inline-block;
+    border: 2px solid #2C6E00;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-radius:10px 0px 10px 10px ;
+    padding:5px 10px; 
+}
+.server.tap .talk{
 transform: scale(1);
 }
-#bot:checked+label{
-    background: no-repeat center/100% url("../logo/serviceopen.svg")
-    ;
+.server.tap .bot img:nth-child(2){
+    opacity: 0;
 }
-
-
+.server .talk .fa-rectangle-xmark{display: none;}
 /* 圓按鈕 */
 .btn button{
     width: 24px;
@@ -522,8 +552,8 @@ display: none;
 .btnchangecolor:hover{
     background-position: 0% 0%;
 }
-.server:hover>label{
-    background: no-repeat center/100% url("../logo/serviceopen.svg");
+.server:hover .bot img:nth-child(2){
+    opacity: 0;
 }
 .footer .social i:hover{
     color: #2C6E00;
@@ -548,6 +578,7 @@ display: none;
         transition: .5s;
     }
     .monav.open{
+        z-index: 30;
         position: fixed;
         height: 100vh;
         width: 100vw;
@@ -830,7 +861,30 @@ display: none;
                 transform:translateX(40px)
     }
     .server .talk{
-        height: 400px;
-        width: 300px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 30;
+        border-radius: 0;
+    }
+    .server .talk .fa-rectangle-xmark{
+        color: #fff;
+        display: inline-block;
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        font-size: 2rem;
+        top: 4px;
+        right: 15px;
+    }
+    .server .talk .info{
+        height: 80vh;
+    }
+    .server .talk .fa-paper-plane{
+        right: 15px;
+        bottom: 30px;
+        font-size: 2rem;
     }
 }

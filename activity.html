@@ -62,10 +62,12 @@
     <main>
         <div class="path">
             <ul>
-                <li><a href="#allact">互動<img src="logo/icon.png"></a></li>
-                <li><a href="#actblock">手作<img src="logo/icon.png"></a></li>
-                <li><a href="#bbq">烤肉<img src="logo/icon.png"></a></li>
+                <li><a href="#allact">互動<img src="logo/icon.png" id="one"></a></li>
+                <li><a href="#actblock">手作<img src="logo/icon.png" id="two"></a></li>
+                <li><a href="#bbq">烤肉<img src="logo/icon.png" id="three"></a></li>
             </ul>
+            <img id="icona" src="logo/icona.png" alt="">
+            <img id="icon" src="logo/icon.png" alt="">
         </div>
         <div class="pagebar">
             <img src="bar\actbar.jpg" alt="activity">
@@ -260,14 +262,23 @@
             </div>
         </div>
     </main>
-    <div class="server">
-        <input type="checkbox" id="bot">
-        <label for="bot">客服羊羊</label>
+    <div class="server">  
+        <div class="bot" id="bot">
+            <img src="logo/serviceopen.svg">
+            <img src="logo/service.svg">
+            <p>客服羊羊</p>
+        </div>
         <div class="talk">
+            <i class="fa-regular fa-rectangle-xmark" id="botclose"></i>
             <div class="header">客服羊羊</div>
             <div class="info">
+                <div class="auto">
+                <p>請問您需要什麼服務咩?</p>
+                <span class="chattime" id="opentime"></span>
             </div>
-            <input type="text">
+            </div>
+            <input type="text" id="textbox">
+            <i class="fa-solid fa-paper-plane" id="send"></i>
         </div>
     </div>
     <footer>

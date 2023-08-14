@@ -1,3 +1,29 @@
+const icona = document.getElementById('icona');
+const icon = document.getElementById('icon')
+let allacty = document.getElementById('allact');
+let actblocky = document.getElementById('actblock');
+let bbqy = document.getElementById('bbq');
+
+window.addEventListener('scroll', function() {
+    if((allacty.getBoundingClientRect().top - window.innerHeight)<=-100){
+        one.src = icona.src
+    }else{
+        one.src = icon.src
+    }
+    if((actblocky.getBoundingClientRect().top - window.innerHeight)<=-100){
+        two.src = icona.src
+    }else{
+        two.src = icon.src
+    }
+    if((bbqy.getBoundingClientRect().top - window.innerHeight)<=-100){
+        three.src = icona.src
+    }else{
+        three.src = icon.src
+    }
+
+});
+
+
 let pic =document.querySelector('.pic');
 let content = document.querySelector('.content');
 let img = content.querySelectorAll('.pic img');
