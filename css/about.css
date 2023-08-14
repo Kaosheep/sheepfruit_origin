@@ -34,6 +34,7 @@ main{
 .price table tr td{
     background-color: #fff;
     color: #2C6E00;
+    white-space: nowrap;
 }
 tr td:last-child{
     width: 30%;
@@ -674,6 +675,9 @@ tr td:nth-child(2){
     }
     .history .block .but{
         width: 70%;
+    }
+    .history .block .logo{
+        width: 80%;
     }
     .time{
         width: 100%;

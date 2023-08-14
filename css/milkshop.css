@@ -206,7 +206,7 @@ transition: .2s;
     }
     .searchbox input{
         -webkit-appearance: none;
-        width: 145px;
+        width: 144px;
         border:1px solid rgb(44, 110, 0);
         border-right:none ;
         font-size: 1rem;
@@ -218,7 +218,7 @@ transition: .2s;
         color: rgb(44, 110, 0);
     }
     .searchbox button{
-        width: 33.5px;
+        width: 33px;
         border: none;
         font-size: 1rem;
         background-color: #fff;
