@@ -62,16 +62,17 @@ main ul li a .tag{
 .tag{
     color: #333;
 }
+
+
+@media screen and (hover:hover){
+main ul li:hover a *{
+    color: #2C6E00;
+}
 main ul li+li:hover{
     transform: translateY(-7px);
     box-shadow: 0px 7px 0px rgba(146, 146, 55, 0.7);
     border-top:1px solid #ccc ;
     
-}
-
-@media screen and (hover:hover){
-main ul li:hover a *{
-    color: #2C6E00;
 }
 }
 @media screen and (max-width:768px){
