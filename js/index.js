@@ -1,6 +1,6 @@
 window.addEventListener('scroll', ()=>{
     if(document.documentElement.scrollTop>window.innerHeight){
-        monav.style.top = '-10px'
+        monav.style.top = '0px'
     }else{
         monav.style.top = '-100%'
     }

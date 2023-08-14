@@ -68,8 +68,11 @@ main ul li+li:hover{
     border-top:1px solid #ccc ;
     
 }
+
+@media screen and (hover:hover){
 main ul li:hover a *{
     color: #2C6E00;
+}
 }
 @media screen and (max-width:768px){
     main ul{
@@ -88,7 +91,8 @@ main ul li:hover a *{
         flex-shrink: 0;
     }
     main ul li a .date{
-        width: 25%;
+        width: 15%;
+        min-width:85px;
         text-align: start;
         border-bottom:1px dashed #2C6E00 ;
     }
@@ -102,8 +106,11 @@ main ul li:hover a *{
         width: 15%;
     }
     main ul li .s{
-        width: 25%;
+        width: 15%;
         text-align: start;
+    }
+    main ul li .s:first-child{
+        min-width: 100px;
     }
     main ul li .ss{
         width: 15%;
@@ -131,10 +138,12 @@ main ul li:hover a *{
     main ul li a .date{
         width: 38%;
         font-size: 0.9rem;
+        
     }
     main ul li a .tag{
         width: 62%;
         font-size: 0.9rem;
+        display: none;
     }
     main ul li :is(.s,.ss,.m){
         text-align: center;

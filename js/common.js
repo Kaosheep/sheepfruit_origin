@@ -25,7 +25,7 @@ opennav.addEventListener("click", function(event) {
         liElement.style.opacity = '1';
     });
     monav.classList.add('open');
-    momenu.classList.add('active');    
+    momenu.classList.add('active');
     },300)
     });
 
@@ -50,4 +50,9 @@ closen.addEventListener("click",()=>{
     liElements.forEach(liElement => {
         liElement.style.opacity = '0';
     });     
+})
+//------------------------------------------
+let totop = document.getElementById('totop');
+totop.addEventListener('click',()=>{
+    window.scrollTo(0,0);
 })

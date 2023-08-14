@@ -11,7 +11,7 @@ function contentwidth(){
  if((Math.floor(pic.offsetWidth /imgwidth)) == 1){
 content.style.width = imgwidth + 'px';
 }else{
- content.style.width = parseInt(Math.floor(pic.offsetWidth /imgwidth)*imgwidth + 10) +'px';   
+ content.style.width = parseInt(Math.floor(pic.offsetWidth /imgwidth)*imgwidth + (10*(pic.offsetWidth /imgwidth-1)))+'px';   
 }   
 }
 contentwidth();

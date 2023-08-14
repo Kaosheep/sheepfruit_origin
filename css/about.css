@@ -375,21 +375,20 @@ tr td:nth-child(2){
     top: 0;
     left: 0;
     z-index: 25;
-    padding:10% 5% 5%;
+    padding:15% 5% 5%;
 }
 .photobox .centerphoto{
     margin: auto;
     display: block;
-    width: 70%;
+    width: 50%;
     max-width: 750px;
-    height: 60%;
     min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+    aspect-ratio: 5/3;
 }
 .photobox .centerphoto img{
-    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -407,7 +406,7 @@ tr td:nth-child(2){
     top: 5%;
     right: 5%;
     font-size: 2rem;
-    color: #2C6E00;
+    color: rgb(44, 110, 0);
     cursor: pointer;
 }
 .photobox .wrap .small{
@@ -558,8 +557,14 @@ tr td:nth-child(2){
     .photo{
         width: 90%;
     }
+    .photo .centerphoto{
+        width: 100%;
+        min-width: 390px;
+        aspect-ratio: auto;
+    }
+    
     .photobox .wrap{
-        max-width: 80%;
+        max-width: 90%;
         justify-content:start;
         overflow-y: hidden;
         overflow-x: scroll;
@@ -618,6 +623,7 @@ tr td:nth-child(2){
         margin: auto;
         width: 70vh;
         height: 100vw;
+        max-width: 470px;
         transform-origin:left bottom;
         transform: rotate(90deg) translateX(-75%);
     }
@@ -686,11 +692,22 @@ tr td:nth-child(2){
         grid-row:4/5;
     }
     .photobox{
-        padding:25% 5% 5%;
+        width: 100%;
+        padding:35% 5% 5%;
     }
     .photobox .centerphoto{
-        width: 80%;
-        height: 60%;
+        width: 100%;
+        height: auto;
+    }
+    .photobox i{
+        top: 12%;
+    }
+    .photobox .centerphoto img{
+        width: 100%;
+        object-fit: contain;
+    }
+    .photobox .wrap{
+        max-width: 100%;
     }
     .history .block:nth-child(2) .txt{
         width: 65%;
