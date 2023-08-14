@@ -67,6 +67,9 @@ let colwidth = document.querySelector('.newcol').offsetWidth;
 let view = document.querySelector('.view');
 let leftbtn = document.querySelector('.btngroup .fa-arrow-left');
 let rightbtn = document.querySelector('.btngroup .fa-arrow-right');
+
+view.style.width = (parseInt(Math.floor(document.querySelector('.sheeprow').offsetWidth/colwidth) * colwidth))+'px';
+
 resizes();
 
 function resizes(){
