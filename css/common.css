@@ -272,12 +272,11 @@ footer h3{
     background: no-repeat center/100% url("../logo/service.svg")
     ;
     cursor: pointer;
-}
-.server label{
     text-align: center;
     padding-top:85px ;
     font-size: 10px;
     color: #2d7000;
+
 }
 .server .talk{
     position: absolute;

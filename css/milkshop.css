@@ -134,7 +134,7 @@ transition: .2s;
 }
 @media screen and (hover:hover) {
     section .item .icon:hover path{
-        animation:heart 1s .1s linear forwards;
+        animation:heart .7s .05s linear forwards;
     }
     section .item:hover img{
     transform: scale(1.1);

@@ -56,3 +56,23 @@ let totop = document.getElementById('totop');
 totop.addEventListener('click',()=>{
     window.scrollTo(0,0);
 })
+//----------------------------
+let server = document.querySelector('.server');
+let bot = document.getElementById('bot')
+
+    
+ 
+
+// bot.addEventListener('click',()=>{
+//     bot.checked = true;
+//     window.addEventListener("click", function (event) {
+//     if (event.target != server && event.target != bot) {
+//         closebot();
+//     }
+// });
+// }) 
+
+
+// function closebot(){
+//     bot.checked = false;
+// }
