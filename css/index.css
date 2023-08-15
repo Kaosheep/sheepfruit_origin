@@ -596,7 +596,21 @@
     object-position: bottom 0px right -100px;
 }
 .wrap .shop{
-    display: none;
+    width: 100px;
+    height: 100px;
+    padding: 28px 0px 0px;
+}
+.wrap .shop i{
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
+.wrap .shop p{
+    color: #fff;
+    font-size: 1rem;
+}
+.wrap .shop::after{
+    width: 100px;
+    height: 100px;
 }
 .wrap .topmenu{
     padding: 15px 10px;
