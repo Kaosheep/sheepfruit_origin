@@ -132,8 +132,9 @@ transition: .2s;
 .searchbox{
     display: none;
 }
+
 @media screen and (hover:hover) {
-    section .item .icon:hover path{
+    section .item .icon:not(.active):hover path{
         animation:heart .7s .05s linear forwards;
     }
     section .item:hover img{

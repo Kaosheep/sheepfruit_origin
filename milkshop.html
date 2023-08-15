@@ -296,7 +296,11 @@
         return ()=>{
         icon[i].classList.toggle("active");
         };
+        if(icon[i].classList.contains('active')){
+            icon[i].style.animation = 'none'
         }
+        }
+
     </script>
 </body>
 </html>
