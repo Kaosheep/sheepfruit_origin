@@ -306,7 +306,24 @@ footer h3{
 .server .talk .info{
     height: 275px;
     padding:5px 15px;
-    overflow-x: scroll;
+    overflow-y: scroll;
+}
+.server .talk .info::-webkit-scrollbar {
+    width: 7px;
+  }
+.server .talk .info::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+.server .talk .info::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 4px;
+}
+.server .talk .info::-webkit-scrollbar-thumb {
+    background: #90B44B;
+    border-radius: 4px;
 }
 .server .talk input{
     font-size: 1.25rem;
