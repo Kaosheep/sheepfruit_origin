@@ -96,10 +96,10 @@ function addtxtWithTime(mes, time, className) {
 function chatback(userInput) {
     if (userInput.includes('時間')) {
         return '營業時間為8:00-17:00咩';
-    }else if (userInput.includes('地點')){
+    }else if (userInput.includes('地點') ||userInput.includes('地址')){
         return '桃園市中壢區復興路46號咩';
     }else if (userInput.includes('交通')||userInput.includes('怎麼去')){
-        return '駕車前往：在國道一號中壢出口下，沿桃桃路直行便可以抵達<br>公共交通工具： 乘坐火車並在中壢火車站下車，在火車站後門轉乘44號公車至羊桃觀光牧場站下車咩。';
+        return '公共交通工具： 乘坐火車並在中壢火車站下車，在火車站後門轉乘44號公車至羊桃觀光牧場站下車咩。';
     }else{
         return '不理解您的輸入咩!';
     }
