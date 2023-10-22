@@ -50,7 +50,7 @@ large.addEventListener('click',(e)=>{
 })
 
 function openModal() {
-    document.getElementById("photobox").style.display = "block";
+    document.getElementById("photobox").style.display = "flex";
 }
 
 function closeModal() {
